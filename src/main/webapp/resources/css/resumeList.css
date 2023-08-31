@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+td {
+	border-top: 2px solid #333;
+	height:40px;
+}
+.resume_list {
+	width:800px;
+	border: 1px solid;
+}
+
+.resume_register {
+	text-align:right;
+	height: 100px;
+}
+
+.register {
+	text-align: center;
+	width: 100px;
+    border-radius: 5px;
+    color: black;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    background-color: #fdff94;
+}
+

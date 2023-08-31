@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mapper.ResumeMapper">
+	<select id="rgetList" resultType="com.example.domain.Resume">
+		
+		select * from resume
+		
+	</select>
+	<insert id="rinsert">
+		insert into resume(r_id, title, ability, career, hope, introduce, job, type, publicc, time, day) values(#{r_id}, #{title}, #{ability}, #{career}, #{hope}, #{introduce}, #{job}, #{type}, #{publicc}, #{time}, #{day})
+	</insert>
+	<insert id ="rinsertSelectKey">
+		<selectKey keyProperty="r_id" order="BEFORE" resultType="long">
+			select r_id from dual where r_id = #{r_id}
+		</selectKey>
+		
+		insert into resume(r_id, title, ability, career, hope, introduce, job, type, publicc, time, day) values(#{r_id}, #{title}, #{ability}, #{career}, #{hope}, #{introduce}, #{job}, #{type}, #{publicc}, #{time}, #{day})
+	</insert>
+	
+  	<select id="rread" resultType="com.example.domain.Resume">
+		select * from resume where r_id = #{r_id}
+	</select>
+	<delete id="rdelete">
+		delete resume where r_id=#{r_id}
+	</delete>
+	<update id="rupdate">
+		update resume set title=#{title}, ability=#{ability}, career=#{career}, hope= #{hope}, introduce=#{introduce}, job=#{job}, type=#{type}, publicc=#{publicc}, time=#{time}, day=#{day} where r_id=#{r_id}
+		
+	</update>
+	
+</mapper>

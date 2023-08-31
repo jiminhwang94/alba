@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+html, body {
+	margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    margin: 0 auto;
+}
+
+.header, .footer {
+	margin: 0 auto;
+	text-align:center;
+}
+
+.header {
+	border-bottom: 2px solid #ffe000;
+	background-color:white;
+}
+
+.main {
+    width: 900px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.content {
+	position: relative;
+	width:800px;
+	padding: 20px 0 80px;
+    margin: 0 auto;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: #222;
+}
+
+li {
+	list-style-type: none;
+}

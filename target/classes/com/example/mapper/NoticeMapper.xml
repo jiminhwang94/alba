@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--notice = 지원목록 -->
+<mapper namespace="com.example.mapper.NoticeMapper">
+	<select id="getNotice" resultType="com.example.domain.NoticeVO">
+		<!--notice 출력 -->
+	<![CDATA[
+ 		select * from notice
+ 		]]>
+		<!-- notice-company=c_company notice-address=p_name -->
+	</select>
+
+	<!--notice 추가 -->
+	<insert id="insert">
+		insert into
+		notice (title, company, datee, day, area, job, age, conn, time, sex, many,
+		ability, treatment, employment, welfare, address)
+		values
+		(#{title}, #{company}, #{datee}, #{day}, #{area}, #{job}, #{age}, #{conn},
+		#{time}, #{sex}, #{many}, #{ability}, #{treatment}, #{employment},
+		#{welfare}, #{address})
+	</insert>
+
+	<!--notice 수정 -->
+	<update id="update">
+		update notice
+		set title = #{title}, datee = #{datee}, day = #{day}, area= #{area}, job=
+		#{job}, age= #{age}, conn= #{conn}, time= #{time}, sex = #{sex}, many
+		= #{many}, ability= #{ability}, treatment = #{treatment}, employment =
+		#{employment}, welfare = #{welfare}, address = #{address}
+		where company = #{company}
+	</update>
+
+	<!-- notice 제거 -->
+	<delete id="delete">
+		delete
+		notice
+		where
+		company = #{company}
+	</delete>
+
+	<select id="read" resultType="com.example.domain.NoticeVO">
+		<!--notice 출력 -->
+	<![CDATA[
+ 		select 
+ 			title, company, datee, day, area, job, age, conn, time, sex, many, ability, treatment, employment, welfare, address
+ 		from 
+ 			notice 
+ 		where 
+ 			 company = #{company}
+ 		]]>
+	</select>
+	<select id="getAreaList"
+		resultType="com.example.domain.NoticeVO">
+		select * from notice where area = #{area}
+	</select>
+	<select id="getAgeList"
+		resultType="com.example.domain.NoticeVO">
+		select * from notice where area = #{age}
+	</select>
+	<select id="getDateeList"
+		resultType="com.example.domain.NoticeVO">
+		select * from notice where area = #{datee}
+	</select>
+	<select id="getConnList"
+		resultType="com.example.domain.NoticeVO">
+		select * from notice where area = #{conn}
+	</select> 
+<!--n_register.jsp<select option 지정한 것들 보고 NoticMapper.java 마무리 ,xml select마무리하기 -->
+	<!--혹시 몰라서 만듬. -->
+	<!-- notice 확인 -->
+	<!-- <select id="check" resultType="com.example.domain.noticeVO"> -->
+
+	<!-- select * from notice -->
+	<!-- where pmember_id = #{pmember_id} and cmember_id = #{cmember_id} -->
+
+	<!-- </select> -->
+
+
+	<!-- <select id="getnoticeWithPaging" resultType="com.example.domain.noticeVO"> -->
+	<!-- <![CDATA[ -->
+	<!-- select -->
+	<!-- company, address, appdate -->
+	<!-- from( -->
+	<!-- select -->
+	<!-- /*INDEX_DESC(notice pk_notice) */ rownum rn, -->
+	<!-- company, address, appdate -->
+	<!-- from -->
+	<!-- notice -->
+	<!-- where -->
+	<!-- rownum <= #{pageNum} * #{amount} -->
+	<!-- ) -->
+	<!-- where -->
+	<!-- rn > (#{pageNum} -1) * #{amount}) -->
+	<!-- ]]> -->
+	<!-- </select> -->
+</mapper>

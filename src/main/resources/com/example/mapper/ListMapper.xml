@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--list = 지원목록 -->
+<mapper namespace="com.example.mapper.ListMapper">
+	
+	<select id="getList" resultType="com.example.domain.ListVO">
+	<!--list 출력 -->
+	<![CDATA[
+ 		select * from list where company = #{company} 
+ 		]]>  
+	<!-- list-company=c_company list-supporter=p_name -->
+	</select> 
+	
+	<!--list 추가 -->
+	<insert id="insert"> 
+		insert into
+				list (company, supporter)
+		
+		values
+				(#{company}, #{supporter})
+	</insert>
+	
+	<!-- list 제거 -->
+	<delete id="delete">
+		delete 
+			list 
+		where 
+			company = #{company} and supporter = #{supporter}
+	</delete>
+	
+	<select id="read" resultType="com.example.domain.ListVO">
+	<!--list 출력 -->
+	<![CDATA[
+		select resume.title, resume.ability, resume.career, resume.hope, resume.introduce, 
+	        pmember.p_name, pmember.p_birth, pmember.p_sex, pmember.p_email, pmember.p_phone, pmember.p_address
+	 		from 
+	 			resume, pmember
+	 		where 
+	 			resume.r_id = #{supporter} and pmember.p_id = #{supporter}	 			
+ 		]]>  
+	<!-- list-company=c_company list-supporter=p_name -->
+	</select> 
+<!--혹시 몰라서 만듬. -->
+	<!-- list 확인 -->
+<!-- 	<select id="check" resultType="com.example.domain.ListVO"> -->
+	
+<!-- 		select * from list  -->
+<!-- 		where pmember_id = #{pmember_id} and cmember_id = #{cmember_id} -->
+	
+<!-- 	</select>	 -->
+	
+	
+<!-- 	<select id="getListWithPaging" resultType="com.example.domain.ListVO"> -->
+<!-- 	<![CDATA[ -->
+<!-- 		select  -->
+<!-- 				company, supporter, appdate -->
+<!-- 		from( -->
+<!-- 				select -->
+<!-- 						/*INDEX_DESC(list pk_list) */ rownum rn, -->
+<!-- 						company, supporter, appdate -->
+<!-- 				from -->
+<!-- 						list -->
+<!-- 				where -->
+<!-- 						rownum <= #{pageNum} * #{amount} -->
+<!-- 			) -->
+<!-- 		where -->
+<!-- 				rn > (#{pageNum} -1) * #{amount}) -->
+<!-- 		]]>  -->
+<!-- 	</select>  -->
+</mapper>

@@ -1,0 +1,5457 @@
+@charset "UTF-8"; /* base */
+html, body {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Malgun Gothic',-apple-system,BlinkMagSystemFont,'AppleGothicNeoSD','Microsoft NeoGothic','Droid sans',Sans-serif;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    background: #f7f7f7
+}
+
+div, ul, ol, dl, p, h1, h2, h3, h4, h5, h6, fieldset, legend, iframe, table {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: 'Malgun Gothic',-apple-system,BlinkMagSystemFont,'AppleGothicNeoSD','Microsoft NeoGothic','Droid sans',Sans-serif;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: #222
+}
+
+ul, ol, dl {
+    list-style: none
+}
+
+dt, dd, li {
+    margin: 0;
+    padding: 0
+}
+
+form {
+    margin: 0
+}
+
+input, select, textarea {
+    font-size: 1em;
+    font-family: 'Malgun Gothic',-apple-system,BlinkMagSystemFont,'AppleGothicNeoSD','Microsoft NeoGothic','Droid sans',Sans-serif;
+    color: #222
+}
+
+img, fieldset, button {
+    border: 0
+}
+
+img {
+    vertical-align: top
+}
+
+hr {
+    display: none
+}
+
+em, address {
+    font-style: normal
+}
+
+label {
+    cursor: pointer
+}
+
+iframe {
+    _vertical-align: top;
+    border: 0 none
+}
+
+iframe.hideFrame, caption, legend, .hide {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: -999em;
+    left: -999em
+}
+
+.displayNone {
+    display: none
+}
+
+/* link */
+a, a:visited {
+    text-decoration: none;
+    color: #222
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+    color: #222
+}
+
+/* class : radio/checkbox */
+input.typeRadio, input.typeCheckbox {
+    position: relative;
+    width: 13px;
+    height: 13px;
+    margin: -4px 0 0;
+    margin-top: -2px\9;
+    *margin-top: -4px;
+    padding: 0;
+    vertical-align: middle
+}
+
+input.typeText {
+    *margin: -1px 0
+}
+
+/* skipNav */
+.skipNav {
+    z-index: 999;
+    position: absolute
+}
+
+.skipNav li a {
+    position: absolute;
+    top: -999em;
+    left: 0;
+    width: 148px;
+    height: 32px;
+    text-align: center;
+    line-height: 33px;
+    background-color: #fee49b
+}
+
+.skipNav li a:focus, .skipNav li a:active {
+    top: 0;
+    left: 0
+}
+
+/* Header */
+#Global {
+    z-index: 105;
+    position: relative;
+    width: 100%;
+    min-width: 1260px;
+    margin: 0 0 12px;
+    background-color: #fff
+}
+
+#Header {
+    z-index: 105;
+    position: relative;
+    width: 1260px;
+    height: 110px;
+    margin: 0 auto;
+    padding: 24px 0 0;
+    box-sizing: border-box
+}
+
+#MainBanner {
+    min-width: 1260px
+}
+
+.headerBi {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.headerBi>a {
+    display: block;
+    padding: 28px 0 24px
+}
+
+.headerBi__local-img {
+    margin: 23px 0 0 10px
+}
+
+.headerSearch {
+    width: 500px;
+    margin: 0 auto
+}
+
+.headerSearch .search {
+    position: relative;
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid #363e4d;
+    border-radius: 22px;
+    background-color: #fff
+}
+
+.headerSearch.on .search {
+    border-radius: 22px 22px 0 0
+}
+
+.headerSearch .searchInput {
+    display: block;
+    width: 355px
+}
+
+.headerSearch .searchInput>input {
+    width: 355px;
+    height: 41px;
+    margin: 0;
+    padding-left: 19px;
+    box-sizing: border-box;
+    border: 0 none;
+    border-radius: 22px 0 0 22px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #fff;
+    outline: none
+}
+
+.headerSearch .searchInput>label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 42px;
+    padding-left: 20px;
+    font-size: 15px;
+    line-height: 42px;
+    cursor: text;
+    color: #9096a1
+}
+
+.headerSearch .searchSubmit {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    font-size: 0;
+    cursor: pointer;
+    color: transparent;
+    background: url('//image.alba.kr/e/common/2023/header.png') no-repeat 0 0 / 150px auto
+}
+
+.headerPopular {
+    width: 650px;
+    margin: 0 auto;
+    text-align: center
+}
+
+.headerPopular>li {
+    display: inline-block;
+    margin: 0 5px 0 7px;
+    font-size: 12px
+}
+
+.headerPopular>li>a {
+    display: block;
+    padding: 10px 15px;
+    color: #777e8c
+}
+
+.headerLink {
+    position: absolute;
+    top: 8px;
+    right: -8px
+}
+
+.headerLink>li {
+    position: relative;
+    float: left
+}
+
+.headerLink>li::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 1px;
+    height: 12px;
+    background-color: #d3dae6
+}
+
+.headerLink>li:first-child::before {
+    content: none
+}
+
+.headerLink>li>a {
+    display: block;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: #4d5260
+}
+
+.headerLink>li em.sns {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    font-size: 0;
+    vertical-align: top;
+    color: transparent;
+    background: url('//image.alba.kr/sns/icon_sns_pc_202104.png') no-repeat 0 0 / 182px auto
+}
+
+.headerLink>li em.sns--facebook {
+    background-position: -37px -49px
+}
+
+.headerLink>li em.sns--naver {
+    background-position: -130px -49px
+}
+
+.headerLink>li em.sns--kakao {
+    background-position: -19px -49px
+}
+
+.headerLink>li em.sns--apple {
+    background-position: -112px -49px
+}
+
+/* 통합검색 자동완성 */
+.ark {
+    z-index: 105;
+    position: absolute;
+    left: -1px;
+    top: 42px
+}
+
+#arkArea {
+    left: auto;
+    right: 0
+}
+
+.ark_wrap {
+    display: none;
+    overflow: hidden;
+    position: relative;
+    width: 500px;
+    letter-spacing: -1px;
+    text-align: left;
+    box-sizing: border-box;
+    border: 1px solid #363e4d;
+    border-top: none;
+    border-radius: 0 0 22px 22px;
+    background-color: #fff
+}
+
+.ark_wrap::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #eaeef3
+}
+
+#arkArea .ark_wrap {
+    right: -2px;
+    left: auto !important;
+    width: 294px
+}
+
+.ark_wrap dl {
+    position: relative
+}
+
+.ark_wrap dt {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    height: 31px;
+    font-size: 13px;
+    line-height: 31px;
+    letter-spacing: 0;
+    color: #666
+}
+
+#arkArea .ark_wrap dt {
+    display: none
+}
+
+.ark_content_list {
+    position: relative;
+    padding: 8px 0
+}
+
+.ark_content_list li {
+    overflow: hidden;
+    height: 32px;
+    padding: 0 50px 0 19px;
+    font-size: 13px;
+    line-height: 32px;
+    letter-spacing: -0.1em;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.ark_content_list li span {
+    font-size: 13px;
+    letter-spacing: 0;
+    color: #2e89e5
+}
+
+.ark_content_list li strong {
+    color: #2e89e5
+}
+
+.ark_content_list li em {
+    display: none !important;
+    position: absolute;
+    right: 20px;
+    height: 31px;
+    font-size: 13px;
+    line-height: 31px;
+    letter-spacing: 0;
+    text-align: right;
+    color: #666
+}
+
+.ark_content_list li.divide {
+    border-top: 1px solid #e1e1e1
+}
+
+.ark_content_list li.divide:first-child {
+    border-top: 0 none
+}
+
+.ark_content_list2 {
+    position: relative;
+    padding: 0 80px 0 14px
+}
+
+.ark_content_list2 li {
+    padding: 10px 0 4px;
+    font-size: 13px;
+    letter-spacing: -0.1em
+}
+
+.ark_content_list2 li a.title {
+    overflow: hidden;
+    display: block;
+    padding-bottom: 1px;
+    font-size: 15px;
+    text-decoration: underline;
+    color: #0000cc;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.ark_content_list2 li span {
+    margin: 0;
+    color: #000
+}
+
+.ark_content_list2 li span.company {
+    color: #218d44
+}
+
+.ark_content_list2 li span.pay {
+    color: #222
+}
+
+.ark_content_list2 li span.bar {
+    padding: 0 8px;
+    color: #ccc
+}
+
+.ark_content_list2 li span.keyword {
+    display: block
+}
+
+.ark_content_list2 li span.keyword .icon {
+    display: inline-block;
+    width: 53px;
+    height: 13px;
+    margin-top: -2px;
+    font-size: 0;
+    vertical-align: middle;
+    color: transparent;
+    background: url('//image.alba.kr/search/icon_keyword.gif') no-repeat 0 0
+}
+
+.ark .page {
+    position: relative;
+    padding: 15px 0 20px;
+    text-align: center
+}
+
+.ark .page a {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 0 2px;
+    font-size: 13px;
+    vertical-align: top;
+    text-align: center;
+    color: #000;
+    border: 1px solid #e5e5e5
+}
+
+.ark .page strong {
+    color: #ea2015
+}
+
+.ark .page .pageBtn {
+    height: 13px;
+    padding-top: 5px
+}
+
+.ark .page .pageBtn span {
+    overflow: hidden;
+    display: inline-block;
+    width: 5px;
+    height: 9px;
+    font-size: 0;
+    vertical-align: top;
+    color: transparent;
+    background: url('//image.alba.kr/e/common/201608/header.png') no-repeat
+}
+
+.ark .page .prevPage span {
+    background-position: -132px 0
+}
+
+.ark .page .nextPage span {
+    background-position: -142px 0
+}
+
+.ark_noInfo {
+    height: 18px;
+    padding: 60px 20px;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: #9096a1
+}
+
+.ark_footer {
+    clear: both;
+    position: relative;
+    height: 44px;
+    padding: 0 19px;
+    background-color: #f7f9fd
+}
+
+.ark_footer .help {
+    position: relative;
+    height: 44px;
+    padding: 0;
+    border: 0 none;
+    font-size: 13px;
+    line-height: 44px;
+    color: #777e8c
+}
+
+.ark_footer .help a {
+    color: #666
+}
+
+.ark_footer .ark-auto>a {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    margin: 12px 0 0 6px;
+    border-radius: 11px;
+    font-size: 0;
+    vertical-align: top;
+    color: transparent
+}
+
+.ark_footer .ark-auto>a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: #fff
+}
+
+.ark_footer .ark-auto.on>a {
+    background-color: #3396fe
+}
+
+.ark_footer .ark-auto.on>a::before {
+    right: 0;
+    left: auto;
+    border: 1px solid #2e89e5
+}
+
+.ark_footer .ark-auto.off>a {
+    background-color: #ced3db
+}
+
+.ark_footer .ark-auto.off>a::before {
+    right: auto;
+    left: 0;
+    border: 1px solid #a2aebf
+}
+
+.ark_footer .help .word {
+    display: none !important
+}
+
+.ark_footer .help .close {
+    float: right
+}
+
+.ark_footer .help .close>span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 14px 0 0 5px;
+    vertical-align: top;
+    background: url('//image.alba.kr/m/svg/x_circle_bggrayD.svg') no-repeat 0 0 / 16px 16px
+}
+
+.ark_footer .jobTotal {
+    position: absolute;
+    top: 9px;
+    top: 10px\0;
+    *top: 10px;
+    right: 10px;
+    font-size: 11px;
+    color: #222
+}
+
+.ark_footer .jobTotal em {
+    padding-right: 1px;
+    font-weight: bold;
+    font-size: 11px;
+    color: #ea2015
+}
+
+#HeaderMenuWrap {
+    z-index: 101;
+    position: relative;
+    width: 100%;
+    border-top: 1px solid #f0f2f5;
+    border-bottom: 2px solid #ffe000;
+    background-color: #fff
+}
+
+#HeaderMenu {
+    z-index: 101;
+    width: 1260px;
+    height: 56px;
+    margin: 0 auto
+}
+
+body.scroll {
+    padding-top: 49px
+}
+
+body.scroll #HeaderMenuWrap {
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0
+}
+
+.headerFilter {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    filter: alpha(opacity=25);
+    opacity: 0.25
+}
+
+.headerMenu {
+    float: left
+}
+
+.headerMenu>li {
+    float: left
+}
+
+.headerMenu>li>a {
+    position: relative;
+    display: block;
+    height: 56px;
+    padding: 0 15px;
+    font-size: 16px;
+    line-height: 56px
+}
+
+.headerMenu>li>a>span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 16px 4px 0 0;
+    vertical-align: top;
+    background: url('//image.alba.kr/e/common/2023/header.png') no-repeat 0 0 / 150px auto
+}
+
+.headerMenu>li>a>.my-text {
+    display: inline-block;
+    width: 54px
+}
+
+.headerMenu>li.all>a {
+    margin-left: -15px;
+    margin-right: 10px;
+    font-weight: bold
+}
+
+.headerMenu>li.all>a::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: -5px;
+    width: 1px;
+    height: 14px;
+    background-color: #777e8c
+}
+
+.headerMenu>li.all>a>span {
+    width: 16px;
+    height: 16px;
+    margin-top: 21px;
+    margin-right: 6px;
+    background-position: -50px 0
+}
+
+.headerMenu>li.person>a>span {
+    background-position: 0 -100px
+}
+
+.headerMenu>li.biz>a>span {
+    background-position: -50px -100px
+}
+
+.headerMenu>li.viv>a>em {
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    width: 13px;
+    height: 13px;
+    background: url('//image.alba.kr/viv/viv_common.png')no-repeat 0 -120px
+}
+
+.headerMenu>li.on>a, .headerMenu>li.active>a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000
+}
+
+.headerMenu>li.on>a::before, .headerMenu>li.active>a::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: auto;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    height: 12px;
+    background-color: rgba(255,242,48,0.5)
+}
+
+.headerMenu>li.active .headerMenuFullWrap, .headerMenu>li.active .headerMenuFull, .headerMenu>li.active .headerMenuSub {
+    display: block
+}
+
+.headerMenuFullWrap {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    border-top: 2px solid #ffe000;
+    background-color: #fff
+}
+
+.headerMenuFull {
+    display: none;
+    width: 1258px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5
+}
+
+.headerMenuFull-title {
+    padding: 13px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    border-bottom: 1px solid #e7e7e7
+}
+
+.headerMenuFull-title>a>span {
+    margin-top: 3px
+}
+
+.headerMenuFull-section {
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.headerMenuFull-section>li {
+    float: left;
+    box-sizing: border-box;
+    width: 14.28%;
+    padding: 20px 0 0;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    border-left: 1px solid #e5e5e5
+}
+
+.headerMenuFull-section>li:first-child {
+    border-left: 0 none
+}
+
+.headerMenuFull-section>li>strong, .headerMenuFull-section>li>a {
+    display: block;
+    margin: 0 0 12px;
+    padding-left: 20px
+}
+
+.headerMenuFull-section-list {
+    overflow: hidden
+}
+
+.headerMenuFull-section-list>li {
+    padding: 4px 0;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 1.2;
+    letter-spacing: -1px
+}
+
+.headerMenuFull-section-list>li>a {
+    padding-left: 20px;
+    color: #666
+}
+
+.headerMenuFull-section-list>li>a>.icon {
+    display: inline-block;
+    height: 14px;
+    height: 13px\0;
+    *height: 13px;
+    margin-top: -2px;
+    padding: 2px 2px 0;
+    padding-top: 3px\0;
+    *padding-top: 3px;
+    font-size: 11px;
+    letter-spacing: -1px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    background: #ff9d12
+}
+
+.headerMenuFull-section-list>li>a>.age19 {
+    display: inline-block;
+    width: 11px;
+    height: 12px;
+    padding-right: 1px;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: #000;
+    border: 1px solid #ff4544;
+    border-radius: 50%
+}
+
+.headerMenu>li.all .headerMenuFull-section>li {
+    height: 268px
+}
+
+.headerMenu>li.all .headerMenuFull-section.biz>li {
+    width: 16.65%;
+    height: 296px
+}
+
+.headerMenu>li.all .headerMenuFull-section__person, .headerMenu>li.all .headerMenuFull-section__biz {
+    background-color: #f8f8f8
+}
+
+.headerMenu>li.person .headerMenuFull-section>li {
+    height: 235px
+}
+
+.headerMenu>li.person .headerMenuFull-section>li.viv {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    height: 30px;
+    border-left: 0 none
+}
+
+.headerMenu>li.person .headerMenuFull-section>li.mystory {
+    position: absolute;
+    top: 127px;
+    left: 71.4%;
+    height: 88px;
+    border-left: 0 none
+}
+
+.headerMenu>li.biz .headerMenuFull-section>li {
+    width: 12.49%;
+    height: 255px
+}
+
+.headerMenu>li.biz .headerMenuFull-section>li.support {
+    position: absolute;
+    top: 145px;
+    left: 0;
+    height: 30px;
+    border-left: 0 none
+}
+
+.headerMenu>li.job .headerMenuFull-section>li {
+    height: 426px
+}
+
+.headerMenu>li.job .headerMenuFull-section>li.pay {
+    position: absolute;
+    top: 147px;
+    left: 42.84%;
+    height: 127px
+}
+
+.headerMenu>li.brand .headerMenuFull-section>li {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 77%;
+    height: 358px
+}
+
+.headerMenu>li.brand .headerMenuFull-section>li.brandType {
+    width: 23%
+}
+
+.headerMenu>li.brand .headerMenuFull-section-list>li {
+    float: left;
+    width: 50%
+}
+
+.headerMenu>li.resume .headerMenuFull-section>li {
+    height: 370px
+}
+
+.headerMenu>li.story .headerMenuFull-section>li {
+    width: 16.65%;
+    height: 230px
+}
+
+.headerMenu>li.story .headerMenuFull-section>li.unique {
+    position: absolute;
+    top: 110px;
+    left: 83.35%;
+    height: 24px;
+    border-left: 0 none
+}
+
+.headerMenu>li.story .headerMenuFull-section>li.interview {
+    position: absolute;
+    top: 138px;
+    left: 83.35%;
+    height: 24px;
+    border-left: 0 none
+}
+
+.headerMenu>li.story .headerMenuFull-section>li.global {
+    position: absolute;
+    top: 166px;
+    left: 83.35%;
+    height: 24px;
+    border-left: 0 none
+}
+
+.headerMenu>li.customer .headerMenuFull-section>li {
+    height: 250px
+}
+
+.headerMenu>li.customer .headerMenuFull-section>li.notice {
+    position: absolute;
+    top: 168px;
+    left: 85.71%;
+    height: 24px;
+    border-left: 0 none
+}
+
+.headerMenu>li.my .headerMenuFull-title {
+    padding: 8px 20px
+}
+
+.headerMenu>li.my .headerMenuFull-title>a.menuSetBtn {
+    display: inline-block;
+    height: 20px;
+    height: 21px\0;
+    *height: 21px;
+    padding: 5px 11px 0 7px;
+    padding-top: 4px\0;
+    *padding-top: 4px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #222;
+    border: 1px solid #bcbdbe;
+    border-bottom: 1px solid #868686
+}
+
+.headerMenu>li.my .headerMenuFull-title>a.menuSetBtn>span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 6px 0 0;
+    background: url('//image.alba.kr/e/common/201608/header.png') no-repeat -120px -69px
+}
+
+.headerMenu>li.my .headerMenuFull-section>li {
+    width: 33.32%;
+    min-height: 98px;
+    padding-bottom: 25px
+}
+
+.headerMenu>li.my--biz .headerMenuFull-section>li {
+    min-height: 122px
+}
+
+.headerMenu>li.my .headerMenuFull-section-list>li {
+    float: left;
+    width: 50%
+}
+
+.headerMenuFull-section-subList {
+    overflow: hidden;
+    margin-bottom: 5px;
+    padding: 0 5px 10px 20px;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.headerMenuFull-section-subList.condition {
+    margin: 8px 0 0;
+    padding-bottom: 0;
+    border-bottom: 0 none
+}
+
+.headerMenuFull-section-subList>li {
+    float: left;
+    margin: 0 0 5px
+}
+
+.headerMenuFull-section-subList.area>li {
+    width: 25%
+}
+
+.headerMenuFull-section-subList.kind>li {
+    width: 50%
+}
+
+.headerMenuFull-section-subList.kind--1>li {
+    width: 100%
+}
+
+.headerMenuFull-section-subList.kind--1>li .divide {
+    margin-left: 5px;
+    padding-left: 9px;
+    background: url('//image.alba.kr/e/common/202009/header.png') no-repeat -149px 4px
+}
+
+.headerMenuFull-section-subList>li>a {
+    font-size: 13px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: #666
+}
+
+.headerMenuFull-section-brandList {
+    padding: 7px 0 0 20px
+}
+
+.headerMenuFull-section-brandList:after {
+    content: "";
+    clear: both;
+    display: block
+}
+
+.headerMenuFull-section-brandList>li {
+    float: left;
+    width: 69px;
+    height: 75px;
+    margin-right: 8px
+}
+
+.headerMenuFull-section-brandList>li>a {
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    font-size: 11px;
+    letter-spacing: -1px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center
+}
+
+.headerMenuFull-section-brandList>li>a>span {
+    display: block;
+    width: 63px;
+    height: 29px;
+    margin-bottom: 6px;
+    padding: 4px 0 0;
+    background: #fff;
+    border: 1px solid #dfdfdf
+}
+
+.headerMenuFull-section-brandList>li>a>span>img {
+    width: 55px
+}
+
+.header-icon {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+    color: transparent;
+    background: url('//image.alba.kr/e/common/202009/header.png') no-repeat
+}
+
+.header-icon--home {
+    width: 7px;
+    height: 11px;
+    margin: 2px 0 0 2px;
+    background-position: -120px -60px
+}
+
+.header-icon--pro {
+    width: 38px;
+    height: 18px;
+    background-position: -60px -60px
+}
+
+.header-icon--19 {
+    width: 16px;
+    height: 16px;
+    margin-top: 1px;
+    background-position: -120px -30px
+}
+
+.header-icon--gangsa {
+    width: 38px;
+    height: 18px;
+    background-position: 0 -90px
+}
+
+.header-icon--ganhojob {
+    width: 34px;
+    height: 18px;
+    background-position: -60px -90px
+}
+
+.header-icon--new {
+    width: 13px;
+    height: 13px;
+    margin-top: 1px;
+    background-position: -90px -30px
+}
+
+.header-icon--career {
+    width: 38px;
+    height: 18px;
+    background-position: -60px -60px
+}
+
+.header-icon--more {
+    width: 56px;
+    height: 22px;
+    margin: -3px 0 0 5px;
+    background-position: -90px -120px
+}
+
+.headerQuick {
+    float: right;
+    padding: 9px 0
+}
+
+.headerQuick>li {
+    float: left;
+    margin-left: 6px
+}
+
+.headerQuick>li>a {
+    display: block;
+    height: 36px;
+    padding: 0 20px 0 16px;
+    font-weight: bold;
+    font-size: 15px;
+    border: 1px solid #ffe000;
+    border-radius: 6px;
+    line-height: 36px;
+    background-color: #fff230
+}
+
+.headerQuick>li>a:hover {
+    text-decoration: none;
+    color: initial
+}
+
+.headerQuick>li>a::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 9px 4px 0 0;
+    vertical-align: top;
+    background: url('//image.alba.kr/e/common/2023/header.png') no-repeat 0 0 / 150px auto
+}
+
+.headerQuick>li.personReg>a::before {
+    background-position: 0 -50px
+}
+
+.headerQuick>li.bizReg>a::before {
+    background-position: -50px -50px
+}
+
+.headerQuick>li.bizMag>a::before {
+    background-position: -100px -50px
+}
+
+.headerQuick>li.bizReg>a, .headerQuick--biz>li>a {
+    border-color: #2e89e5;
+    color: #fff !important;
+    background-color: #3396fe
+}
+
+.headerQuick>li.bizReg>a>span, .headerQuick--biz>li>a>span {
+    text-shadow: 0 0 2px #003e80
+}
+
+.myMenuSetWrap {
+    display: none
+}
+
+.myMenuSet {
+    z-index: 999;
+    position: fixed;
+    top: 161px;
+    left: 50%;
+    width: 1068px;
+    height: 584px;
+    margin-left: -535px;
+    border: 1px solid #333;
+    background: #fff
+}
+
+.myMenuSet-title {
+    display: block;
+    padding: 12px 20px 15px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #282828;
+    letter-spacing: -2px;
+    color: #333;
+    border-bottom: 1px solid #e7e7e7
+}
+
+.myMenuSet-section {
+    overflow: hidden;
+    width: 100%
+}
+
+.myMenuSet-section>li {
+    float: left;
+    width: 315px;
+    height: 458px;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    border-left: 1px solid #e7e7e7
+}
+
+.myMenuSet-section>li:first-child {
+    border-left: none
+}
+
+.myMenuSet-section>li>strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333
+}
+
+.myMenuSet-section-list {
+    float: left;
+    width: 315px;
+    *zoom:1}
+
+.myMenuSet-section-list:after {
+    content: " ";
+    clear: both;
+    display: block
+}
+
+.myMenuSet-section-list + .myMenuSet-section-list {
+    margin-left: 25px
+}
+
+.myMenuSet-section-list>li {
+    float: left;
+    width: 50%;
+    margin-top: 7px
+}
+
+.myMenuSet-section-list>li>span.input {
+    position: relative;
+    display: inline-block
+}
+
+.myMenuSet-section-list>li>span.input * {
+    vertical-align: middle;
+    cursor: pointer
+}
+
+.myMenuSet-section-list>li>span.input input {
+    position: absolute;
+    left: 0;
+    margin: 0;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0)
+}
+
+.myMenuSet-section-list>li>span.input label {
+    display: inline-block;
+    height: 17px;
+    padding: 0 0 0 20px;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #444;
+    *line-height: 1.3;
+    background: url('//image.alba.kr/comm/input.png') no-repeat;
+    white-space: nowrap
+}
+
+.myMenuSet-section-list>li>span.input input[type="checkbox"] + label {
+    background-position: 0 1px
+}
+
+.myMenuSet-section-list>li>span.input.on input[type="checkbox"] + label {
+    background-position: 0 -19px;
+    color: #2073f0
+}
+
+.myMenuSet-section-btn {
+    position: relative;
+    padding: 15px 20px;
+    text-align: right;
+    border-top: 1px solid #e7e7e7
+}
+
+.myMenuSet-section-btn>a {
+    display: inline-block;
+    width: 65px;
+    padding: 5px 0 7px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.2;
+    text-align: center;
+    border: 1px solid #bcbdbe;
+    border-bottom: 1px solid #868686
+}
+
+.myMenuSet-section-btn>a.left {
+    position: absolute;
+    top: 15px;
+    left: 20px
+}
+
+.myMenuSet-filter {
+    z-index: 998;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5
+}
+
+/* mainTop */
+#mainTop {
+    width: 1260px;
+    margin: 0 auto 12px
+}
+
+#mainTop:after {
+    content: " ";
+    clear: both;
+    display: block
+}
+
+#mainTop>.mainTop1 {
+    overflow: hidden;
+    float: left;
+    width: 942px;
+    margin-bottom: 12px
+}
+
+#mainTop>.mainTop2 {
+    float: right;
+    width: 306px
+}
+
+#mainTop>.mainTop3 {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    width: 942px;
+    border: 1px solid #e5e5e5;
+    background-color: #fff
+}
+
+/* mainTop1 - 탑 배너 */
+#TopBanner {
+    position: relative;
+    float: left;
+    width: 624px;
+    height: 126px
+}
+
+#TopBanner img {
+    width: 624px;
+    height: 126px
+}
+
+.banner-line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.05;
+    filter: alpha(opacity=5)
+}
+
+.banner-line--t {
+    bottom: auto;
+    border-top: 1px solid #000
+}
+
+.banner-line--r {
+    left: auto;
+    border-right: 1px solid #000
+}
+
+.banner-line--b {
+    top: auto;
+    border-bottom: 1px solid #000
+}
+
+.banner-line--l {
+    right: auto;
+    border-left: 1px solid #000
+}
+
+/* mainTop1 - 공지사항 */
+#MainNotice {
+    position: relative;
+    float: right;
+    width: 264px;
+    height: 84px;
+    padding: 18px 20px 22px;
+    border: 1px solid #e5e5e5;
+    background-color: #fff
+}
+
+#MainNotice h2 {
+    height: 19px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px
+}
+
+#MainNotice .list {
+    overflow: hidden;
+    height: 66px
+}
+
+#MainNotice li {
+    margin-bottom: 7px
+}
+
+#MainNotice li>a {
+    overflow: hidden;
+    display: block;
+    height: 15px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+#MainNotice li>a>.type {
+    margin-right: 5px;
+    color: #2346e4
+}
+
+#MainNotice .action {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+#MainNotice .action>a {
+    display: block;
+    width: 7px;
+    height: 12px;
+    padding: 22px 20px 12px;
+    font-size: 0;
+    color: transparent
+}
+
+#MainNotice .action>a>span {
+    display: block;
+    width: 7px;
+    height: 12px;
+    background: #fff url('//image.alba.kr/e/main/202005/icon_person.png') no-repeat -60px 0
+}
+
+/* mainTop3 - 지역별 알바 */
+#PrimaryMenu {
+    overflow: hidden;
+    float: left;
+    box-sizing: border-box;
+    width: 55.5%;
+    height: 201px;
+    background-color: #fff
+}
+
+#PrimaryMenu>li {
+    float: left;
+    box-sizing: border-box;
+    width: 49%;
+    height: 203px;
+    border-left: 1px solid #e5e5e5
+}
+
+#PrimaryMenu>li:first-child {
+    border-left-color: #fff
+}
+
+#PrimaryMenu .titleSub>a, #PrimaryMenu .titleSub>span {
+    display: block;
+    height: 62px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 62px;
+    text-align: center
+}
+
+#PrimaryMenu .menu {
+    overflow: hidden
+}
+
+#PrimaryMenu .menu a {
+    float: left;
+    width: 33.33%;
+    font-size: 14px
+}
+
+#PrimaryMenu .menuEtc {
+    position: absolute;
+    top: auto;
+    right: 26px;
+    bottom: 0;
+    left: 26px;
+    height: 48px;
+    padding: 0 3px;
+    border-top: 1px solid #e5e5e5;
+    line-height: 48px
+}
+
+#PrimaryMenu .menuEtc>a>span {
+    display: inline-block;
+    width: 18px;
+    height: 20px;
+    margin: 14px 3px 0 0;
+    vertical-align: top;
+    background: url('//image.alba.kr/e/main/202005/icon_area.png') no-repeat 0 0
+}
+
+#PrimaryMenu .menuEtc>a.etcUniv {
+    text-align: center
+}
+
+#PrimaryMenu .menuEtc>a.etcUniv>span {
+    background-position: -30px 0
+}
+
+#PrimaryMenu .menuEtc>a.etcMap {
+    text-align: right
+}
+
+#PrimaryMenu .menuEtc>a.etcMap>span {
+    width: 17px;
+    background-position: 0 -30px
+}
+
+#PrimaryMenu>li.list01 {
+    position: relative;
+    width: 51%
+}
+
+#PrimaryMenu>li.list01>.menu {
+    padding: 0 22px
+}
+
+#PrimaryMenu>li.list01>.menu--basic {
+    padding: 0 28px
+}
+
+#PrimaryMenu>li.list01>.menu>a {
+    float: none;
+    display: inline-block;
+    width: auto;
+    margin: 0 0 12px 6px
+}
+
+#PrimaryMenu>li.list01>.menu>a.noLine {
+    margin-left: 0
+}
+
+#PrimaryMenu>li.list02>.menu {
+    padding: 0 15px
+}
+
+#PrimaryMenu>li.list02>.menu>a {
+    margin: 0 0 20px;
+    text-align: center
+}
+
+#PrimaryMenu>li.list02>.menu>a>span {
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin: 0 auto 6px;
+    background: url('//image.alba.kr/e/main/202005/icon_theme.png') no-repeat 0 0
+}
+
+#PrimaryMenu>li.list02>.menu>a.list02_1>span {
+    background-position: 0 0
+}
+
+#PrimaryMenu>li.list02>.menu>a.list02_2>span {
+    background-position: -30px 0
+}
+
+#PrimaryMenu>li.list02>.menu>a.list02_3>span {
+    background-position: -60px 0
+}
+
+#PrimaryMenu>li.list02>.menu>a.list02_4>span {
+    background-position: 0 -30px
+}
+
+#PrimaryMenu>li.list02>.menu>a.list02_5>span {
+    background-position: -30px -30px
+}
+
+#PrimaryMenu>li.list02>.menu>a.list02_6>span {
+    background-position: -60px -30px
+}
+
+/* mainTop3 - 우대별 알바 */
+#Preference {
+    overflow: hidden;
+    float: left;
+    box-sizing: border-box;
+    width: 27.2%;
+    height: 201px;
+    border-left: 1px solid #e5e5e5;
+    background-color: #fff
+}
+
+#Preference>li {
+    width: 254px;
+    height: 199px
+}
+
+#Preference .titleSub>a, #Preference .titleSub>span {
+    display: block;
+    height: 62px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 62px;
+    text-align: center
+}
+
+#Preference .menu {
+    overflow: hidden
+}
+
+#Preference .menu a {
+    float: left;
+    width: 33.33%;
+    font-size: 14px
+}
+
+#Preference>li>.menu {
+    padding: 0 15px
+}
+
+#Preference>li>.menu>a {
+    margin: 0 0 20px;
+    text-align: center
+}
+
+#Preference>li>.menu>a>span {
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin: 0 auto 6px;
+    background: url('//image.alba.kr/e/main/202005/icon_preference.png') no-repeat 0 0
+}
+
+#Preference>li>.menu>a.list_1>span {
+    background-position: 0 0
+}
+
+#Preference>li>.menu>a.list_2>span {
+    background-position: -30px 0
+}
+
+#Preference>li>.menu>a.list_3>span {
+    background-position: -60px 0
+}
+
+#Preference>li>.menu>a.list_4>span {
+    background-position: 0 -30px
+}
+
+#Preference>li>.menu>a.list_5>span {
+    background-position: -30px -30px
+}
+
+#Preference>li>.menu>a.list_6>span {
+    background-position: -60px -30px
+}
+
+/* mainTop3 - 탑 PR */
+#TopPR {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 163px;
+    height: 201px;
+    border-left: 1px solid #e5e5e5
+}
+
+#TopPR img {
+    width: 163px;
+    height: 201px
+}
+
+/* mainTop3 - 로그인 */
+.login-main {
+    width: 304px;
+    height: 165px;
+    margin: 0 0 12px;
+    border: 1px solid #e5e5e5;
+    background-color: #fff
+}
+
+.login-main__action {
+    width: 100%;
+    height: 124px
+}
+
+.login-main__action>li {
+    position: relative;
+    float: left;
+    width: 50%
+}
+
+.login-main__action>li.login-main__action-P::after {
+    content: "";
+    position: absolute;
+    top: 28px;
+    right: 0;
+    width: 1px;
+    height: 69px;
+    background-color: #e5e5e5
+}
+
+.login-main__action>li>a {
+    display: block;
+    width: 100%;
+    padding: 28px 0;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.33;
+    text-align: center
+}
+
+.login-main__action>li>a::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 6px;
+    background: url('//image.alba.kr/main/main_login.png') no-repeat;
+    background-size: 60px auto
+}
+
+.login-main__action>li.login-main__action-P>a::before {
+    background-position: 0 0
+}
+
+.login-main__action>li.login-main__action-C>a::before {
+    background-position: -30px 0
+}
+
+.login-main__member {
+    height: 40px;
+    border-top: 1px solid #e5e5e5;
+    line-height: 40px;
+    text-align: center;
+    background-color: #f0f0f0
+}
+
+.login-main__member>li {
+    display: inline-block;
+    margin-left: 4px;
+    padding-left: 9px;
+    background: url('//image.alba.kr/e/common/202009/header.png') no-repeat -149px 15px
+}
+
+.login-main__member>li:first-child {
+    margin-left: 0;
+    padding-left: 0;
+    background: none
+}
+
+.login-main__member>li>a {
+    font-size: 13px;
+    letter-spacing: -1px;
+    color: #666
+}
+
+/* mainTop3 - 로그아웃 */
+#loginbox {
+    width: 304px;
+    height: 339px;
+    border: 1px solid #e5e5e5;
+    background-color: #fff
+}
+
+.logout-person {
+    position: relative;
+    width: 304px;
+    height: 339px;
+    background-color: #fff
+}
+
+.logout-person__info {
+    width: 264px;
+    height: 124px;
+    padding: 0 20px;
+    border-bottom: 1px solid #e5e5e5;
+    letter-spacing: -1px
+}
+
+.logout-person__info>li {
+    float: right;
+    width: 196px
+}
+
+.logout-person__info>li .btn {
+    display: inline-block;
+    height: 17px;
+    margin-top: -1px;
+    padding: 0 8px;
+    border: 1px solid #5a74f1;
+    border-radius: 9.5px;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    color: #2346e4
+}
+
+.logout-person__info>li.photo {
+    position: relative;
+    float: left;
+    width: 56px;
+    margin-top: 28px
+}
+
+.logout-person__info>li.photo a {
+    display: block;
+    text-decoration: none
+}
+
+.logout-person__info>li.photo img {
+    width: 54px;
+    height: 54px;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%
+}
+
+.logout-person__info>li.photo span {
+    position: absolute;
+    right: -2px;
+    bottom: 1px;
+    width: 21px;
+    height: 21px;
+    font-size: 0;
+    color: transparent;
+    background: url('//image.alba.kr/e/main/202005/icon_person.png') no-repeat -30px 0
+}
+
+.logout-person__info>li.member {
+    margin-bottom: 12px;
+    padding-top: 30px
+}
+
+.logout-person__info>li.member .memberName {
+    overflow: hidden;
+    display: inline-block;
+    max-width: 100px;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.logout-person__info>li.member .modify {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-top: 1px;
+    font-size: 0;
+    vertical-align: top;
+    color: transparent;
+    background: url('//image.alba.kr/e/main/202005/icon_person.png') no-repeat 0 0
+}
+
+.logout-person__info>li.resumeCount {
+    margin-bottom: 6px;
+    font-size: 14px
+}
+
+.logout-person__info>li.resumeCount span {
+    display: inline-block;
+    width: 7px;
+    height: 12px;
+    margin: 2px 0 0 8px;
+    vertical-align: top;
+    background: url('//image.alba.kr/e/main/202005/icon_person.png') no-repeat -60px 0
+}
+
+.logout-person__info>li.resumeState {
+    font-size: 13px
+}
+
+.logout-person__info>li.resumeState>a {
+    color: #2346e4
+}
+
+.logout-person__info>li.resumeState--none {
+    font-size: 12px;
+    letter-spacing: -0.1em
+}
+
+.logout-person__link {
+    overflow: hidden;
+    width: 100%
+}
+
+.logout-person__link>li {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    width: 33.33%;
+    border-bottom: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5
+}
+
+.logout-person__link>li>a {
+    display: block;
+    height: 66px;
+    padding: 16px 0 0;
+    font-size: 13px;
+    letter-spacing: -0.1em;
+    text-align: center
+}
+
+.logout-person__link>li span {
+    display: block;
+    margin: 0 auto 8px;
+    width: 28px;
+    height: 28px;
+    background-image: url('//image.alba.kr/e/main/202005/icon_person.png');
+    background-repeat: no-repeat
+}
+
+.logout-person__link>li em {
+    position: absolute;
+    top: 10px;
+    left: 52%;
+    height: 14px;
+    padding: 0 5px;
+    border-radius: 8px;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0;
+    color: #fff;
+    background-color: #5b79fe
+}
+
+.logout-person__link>li .new-icon {
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    right: 24px;
+    width: 24px;
+    height: 13px;
+    background: url('//image.alba.kr/e/main/202005/icon_person.png') no-repeat -90px -30px
+}
+
+.logout-person__link-resumemag, .logout-person__link-recent {
+    border-left: 0 none !important
+}
+
+.logout-person__link-resumemag span {
+    background-position: 0 -30px
+}
+
+.logout-person__link-resumeread span {
+    background-position: -30px -30px
+}
+
+.logout-person__link-application span {
+    background-position: -60px -30px
+}
+
+.logout-person__link-recent span {
+    background-position: 0 -60px
+}
+
+.logout-person__link-scrap span {
+    background-position: -30px -60px
+}
+
+.logout-person__link-story span {
+    background-position: -60px -60px
+}
+
+.logout-person__link-viv span {
+    background-position: -90px -60px
+}
+
+.logout-person__list {
+    overflow: hidden;
+    width: 100%;
+    background-color: #fafafa
+}
+
+.logout-person__list li {
+    float: left;
+    box-sizing: border-box;
+    width: 33.33%;
+    height: 49px
+}
+
+.logout-person__list li>a {
+    display: block;
+    height: 48px;
+    font-size: 13px;
+    line-height: 48px;
+    letter-spacing: -0.1em;
+    text-align: center;
+    color: #666
+}
+
+.logout-biz {
+    position: relative;
+    width: 304px;
+    height: 339px;
+    background-color: #fff
+}
+
+.logout-biz__member {
+    height: 31px;
+    padding: 21px 0 0 20px;
+    font-weight: bold;
+    font-size: 16px
+}
+
+.logout-biz__info-mod {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-top: 1px;
+    font-size: 0;
+    vertical-align: top;
+    color: transparent;
+    background: url('//image.alba.kr/e/main/202005/icon_biz.png') no-repeat 0 0
+}
+
+.logout-biz__info {
+    overflow: hidden;
+    width: 304px;
+    border-bottom: 1px solid #e5e5e5;
+    letter-spacing: -1px
+}
+
+.logout-biz__info>li {
+    float: left;
+    width: 25%
+}
+
+.logout-biz__info>li>a {
+    display: block;
+    height: 68px;
+    padding-top: 17px;
+    font-size: 13px;
+    text-align: center
+}
+
+.logout-biz__info.none>li>a {
+    line-height: 1.5
+}
+
+.logout-biz__info>li strong {
+    display: block;
+    margin: 0 0 8px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    color: #2346e4
+}
+
+.logout-biz__link {
+    overflow: hidden;
+    width: 100%
+}
+
+.logout-biz__link>li {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    width: 33.33%;
+    border-bottom: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5
+}
+
+.logout-biz__link>li>a {
+    display: block;
+    height: 62px;
+    padding: 13px 0 0;
+    font-size: 13px;
+    letter-spacing: -0.1em;
+    text-align: center
+}
+
+.logout-biz__link>li.logout-biz__link-count>a {
+    height: 57px;
+    padding-top: 18px
+}
+
+.logout-biz__link>li span {
+    display: block;
+    margin: 0 auto 7px;
+    width: 28px;
+    height: 28px;
+    background-image: url('//image.alba.kr/e/main/202005/icon_biz.png');
+    background-repeat: no-repeat
+}
+
+.logout-biz__link>li em {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #5b79fe
+}
+
+.logout-biz__link>li .new-icon {
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    right: 24px;
+    width: 24px;
+    height: 13px;
+    background: url('//image.alba.kr/e/main/202005/icon_biz.png') no-repeat -60px 0
+}
+
+.logout-biz__link-regist, .logout-biz__link-coupon, .logout-biz__link-viv {
+    border-left: 0 none !important
+}
+
+.logout-biz__link-regist span {
+    background-position: 0 -30px
+}
+
+.logout-biz__link-viv span {
+    background-position: -30px 0
+}
+
+.logout-biz__link-goods span {
+    background-position: -30px -30px
+}
+
+.logout-biz__link-applicants span {
+    background-position: -60px -30px
+}
+
+.logout-biz__list-wrap {
+    overflow: hidden;
+    width: 100%;
+    height: 49px
+}
+
+.logout-biz__list {
+    overflow: hidden;
+    width: 100%;
+    background-color: #fafafa
+}
+
+.logout-biz__list li {
+    height: 49px;
+    border-left: 1px solid #e5e5e5
+}
+
+.logout-biz__list li:first-child {
+    border-left-color: #fafafa
+}
+
+.logout-biz__list li>a {
+    overflow: hidden;
+    display: block;
+    height: 48px;
+    padding: 0 15px 0 19px;
+    font-size: 13px;
+    line-height: 48px;
+    letter-spacing: -0.1em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #666
+}
+
+.logout-biz__list li em {
+    height: 19px;
+    margin-right: 2px;
+    padding: 0 8px;
+    border: 1px solid #5b79fe;
+    border-radius: 15px;
+    font-size: 12px;
+    line-height: 19px;
+    color: #2346e4
+}
+
+.logout-biz__list li.noInfo {
+    line-height: 49px;
+    text-align: center;
+    color: #666
+}
+
+.logout__close {
+    position: absolute;
+    top: 20px;
+    right: 20px
+}
+
+.logout-person .logout__close {
+    top: 28px
+}
+
+.logout__close>a {
+    display: block;
+    width: 64px;
+    height: 20px;
+    border: 1px solid #e5e5e5;
+    font-size: 12px;
+    letter-spacing: -0.1em;
+    line-height: 21px;
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+    background-color: #fff
+}
+
+/* mainTop3 - 프로모션 */
+#Promotion {
+    width: 304px;
+    height: 160px;
+    border: 1px solid #e5e5e5
+}
+
+#Promotion img {
+    width: 304px;
+    height: 160px
+}
+
+/* 브랜드 채용관 */
+#BrandSite {
+    overflow: hidden;
+    position: relative;
+    width: 1063px;
+    height: 85px;
+    margin: 0 auto 50px;
+    padding: 0 155px 0 40px;
+    border: 1px solid #e5e5e5;
+    background-color: #fff
+}
+
+#BrandSite .brand {
+    overflow: hidden;
+    position: relative;
+    width: 1063px
+}
+
+#BrandSite .brand ul {
+    width: 2124px
+}
+
+#BrandSite .brand ul>li {
+    position: relative;
+    float: left;
+    width: 118px
+}
+
+#BrandSite .brand ul>li a {
+    display: block;
+    height: 35px;
+    padding: 25px 0 26px;
+    text-align: center
+}
+
+#BrandSite .brand ul>li img {
+    width: 77px;
+    height: 35px
+}
+
+#BrandSite .brand ul>li .hover {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+#BrandSite .brand ul>li:hover .hover {
+    display: block
+}
+
+#BrandSite .brand ul>li .hover>.name {
+    z-index: 1;
+    position: relative;
+    display: block;
+    margin-bottom: 5px;
+    padding-top: 22px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    color: #fff
+}
+
+#BrandSite .brand ul>li .hover>.count {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    height: 17px;
+    padding: 0 8px;
+    border: 1px solid #ffe65a;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    color: #ffe65a
+}
+
+#BrandSite .brand ul>li .hover>.filter {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    filter: alpha(opacity=30);
+    opacity: 0.3
+}
+
+#BrandSite .pagingGo>a {
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 51px;
+    padding-top: 35px;
+    background-color: #fff
+}
+
+#BrandSite .pagingGo>a>span {
+    display: block;
+    width: 9px;
+    height: 16px;
+    margin: 0 auto;
+    font-size: 0;
+    color: transparent;
+    background: #fff url('//image.alba.kr/e/main/202005/icon_brand.png') no-repeat
+}
+
+#BrandSite .pagingGo>a.btn_prev {
+    left: 0
+}
+
+#BrandSite .pagingGo>a.btn_prev>span {
+    background-position: 0 0
+}
+
+#BrandSite .pagingGo>a.btn_next {
+    right: 0
+}
+
+#BrandSite .pagingGo>a.btn_next>span {
+    background-position: -20px 0
+}
+
+#BrandSite .pagingGo>a.btn_more {
+    top: 25px;
+    right: 75px;
+    width: 72px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid #d1d1d1;
+    font-size: 13px;
+    line-height: 34px;
+    text-align: center;
+    color: #666
+}
+
+#BrandSite .pagingGo>a.btn_more>span {
+    display: Inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
+    background-position: 0 -20px
+}
+
+#BrandSite .pagingGo>a.btn_pause {
+    right: 40px;
+    width: 34px;
+    height: 22px;
+    margin-top: 25px;
+    padding-top: 12px;
+    border: 1px solid #d1d1d1;
+    line-height: 34px
+}
+
+#BrandSite .pagingGo>a.btn_pause>span {
+    width: 6px;
+    height: 10px;
+    background-position: -20px -20px
+}
+
+/* VIP 배너 */
+#VIPBanner {
+    overflow: hidden;
+    width: 1070px;
+    height: 94px;
+    margin: 0 auto 26px
+}
+
+#VIPBanner li {
+    width: 529px;
+    height: 94px;
+    font-size: 0;
+    color: transparent;
+    background: url('//image.alba.kr/e/main/201410/VIPBanner.jpg') no-repeat
+}
+
+#VIPBanner li a {
+    display: block;
+    height: 100%
+}
+
+#VIPBanner li.ubase {
+    float: left;
+    background-position: 0 0
+}
+
+#VIPBanner li.dreami {
+    float: right;
+    background-position: -534px 0
+}
+
+/* mainBottom  */
+#mainBottom {
+    overflow: hidden;
+    width: 1260px;
+    margin: 0 auto
+}
+
+.mainBottom__title {
+    margin-bottom: 15px;
+    font-size: 24px
+}
+
+.community-main {
+    border: 1px solid #e5e5e5;
+    background-color: #fff
+}
+
+.community-main--1 {
+    float: left;
+    width: 940px
+}
+
+.community-main--2 {
+    float: right;
+    width: 304px
+}
+
+.community-main__wrap {
+    overflow: hidden;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.community-main__more {
+    position: absolute;
+    top: 24px;
+    right: 19px;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    color: transparent;
+    background: url('//image.alba.kr/e/main/202005/btn_more.png') no-repeat 0 0
+}
+
+.community-main h3 {
+    height: 38px;
+    font-weight: bold;
+    font-size: 20px
+}
+
+.community-list {
+    position: relative
+}
+
+.community-list__title {
+    height: 26px !important
+}
+
+.community-list--story {
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    height: 260px;
+    padding: 22px 19px 0
+}
+
+.community-list--repute {
+    float: right;
+    box-sizing: border-box;
+    width: 50%;
+    height: 260px;
+    padding: 22px 19px 0;
+    border-left: 1px solid #e5e5e5
+}
+
+.community-list__list>li {
+    height: 55px;
+    padding-top: 15px;
+    border-top: 1px solid #e5e5e5
+}
+
+.community-list__list>li:first-child {
+    border-top: 0 none
+}
+
+.community-list__list-title {
+    overflow: hidden;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.community-list__list-id {
+    font-size: 13px;
+    color: #666
+}
+
+.community-list__list-date {
+    margin-left: 4px;
+    padding-left: 7px;
+    font-size: 13px;
+    color: #5b79fe;
+    background: url('//image.alba.kr/e/common/202009/header.png') no-repeat -149px 4px
+}
+
+.community-interview {
+    position: relative;
+    float: left;
+    width: 432px;
+    height: 226px;
+    padding: 22px 19px 0
+}
+
+.community-interview__list {
+    overflow: hidden
+}
+
+.community-interview__list>li {
+    float: right;
+    width: 200px
+}
+
+.community-interview__list>li:first-child {
+    float: left
+}
+
+.community-interview__img {
+    display: block;
+    width: 200px;
+    height: 130px;
+    margin-bottom: 10px
+}
+
+.community-interview__content {
+    overflow: hidden;
+    display: block;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.community-news {
+    position: relative;
+    float: right;
+    width: 432px;
+    height: 226px;
+    padding: 22px 19px 0
+}
+
+.community-news__link {
+    overflow: hidden;
+    display: table;
+    width: 432px
+}
+
+.community-news__img {
+    display: table-cell;
+    width: 201px;
+    height: 134px
+}
+
+.community-news__content {
+    display: table-cell;
+    width: 211px;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    word-break: keep-all;
+    vertical-align: middle
+}
+
+.community-campaign {
+    overflow: hidden;
+    width: 100%
+}
+
+.community-campaign>li {
+    float: right;
+    width: 470px
+}
+
+.community-campaign>li:first-child {
+    float: left
+}
+
+.community-campaign a {
+    display: block
+}
+
+.community-campaign img {
+    width: 470px;
+    height: 145px
+}
+
+.community-lawPay {
+    position: relative;
+    width: 304px;
+    height: 260px;
+    border-bottom: 1px solid #e5e5e5;
+    background: url('//image.alba.kr/e/main/202005/community_lawpay_2022.png') no-repeat 0 0
+}
+
+.community-lawPay-view {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    color: transparent
+}
+
+.community-research {
+    position: relative;
+    float: left;
+    width: 266px;
+    height: 226px;
+    padding: 22px 19px 0;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.community-research__content {
+    display: block
+}
+
+.community-research__content-img {
+    display: block;
+    width: 150px;
+    height: 100px;
+    margin: 0 auto 25px
+}
+
+.community-research__content-title {
+    overflow: hidden;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.community-research__content-date {
+    font-size: 13px;
+    color: #999
+}
+
+.community-income {
+    position: relative;
+    float: left;
+    width: 266px;
+    height: 123px;
+    padding: 22px 19px 0
+}
+
+.community-income__content {
+    display: block;
+    background: url('//image.alba.kr/e/main/202005/community_income.png') no-repeat right bottom
+}
+
+.community-income__content-title {
+    overflow: hidden;
+    display: block;
+    height: 46px;
+    margin-bottom: 6px;
+    padding-right: 75px;
+    font-size: 15px;
+    line-height: 1.5;
+    word-break: keep-all
+}
+
+.community-income__content-date {
+    font-size: 13px;
+    color: #999
+}
+
+.community-income__content--prevention {
+    display: block;
+    height: 67px;
+    background: url('//image.alba.kr/e/main/202005/community_prevention.png') no-repeat right bottom
+}
+
+/* Footer */
+#FooterWrap {
+    clear: both;
+    width: 100%;
+    min-width: 1260px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    border-top: 1px solid #eee;
+    background-color: #fff
+}
+
+#Footer {
+    width: 100%
+}
+
+.footer__cs {
+    overflow: hidden;
+    width: 1260px;
+    margin: 0 auto;
+    padding: 30px 0
+}
+
+.footer__customer {
+    float: left;
+    width: 513px;
+    height: 78px;
+    padding-top: 3px
+}
+
+.footer__customer-tel {
+    float: left;
+    width: 185px;
+    font-size: 20px;
+    line-height: 1.1
+}
+
+.footer__customer-tel>strong {
+    display: block;
+    margin-top: -1px;
+    margin-bottom: 3px;
+    font-weight: bold;
+    font-size: 34px
+}
+
+.footer__customer-tel>span {
+    display: block;
+    font-size: 12px;
+    color: #666
+}
+
+.footer__customer-contact {
+    float: right;
+    width: 288px
+}
+
+.footer__customer-contact>li {
+    font-size: 13px;
+    line-height: 2
+}
+
+.footer__customer-contact>li>span {
+    display: inline-block;
+    width: 40px
+}
+
+.footer__customer-contact>li>span.add {
+    width: auto;
+    color: #999
+}
+
+.footer__faq {
+    float: left;
+    box-sizing: border-box;
+    width: 426px;
+    height: 78px;
+    padding-top: 3px;
+    border-left: 1px solid #ddd;
+    text-align: center
+}
+
+.footer__faq>li {
+    display: inline-block
+}
+
+.footer__faq a {
+    display: block;
+    padding: 0 20px;
+    font-size: 13px
+}
+
+.footer__faq span {
+    display: block;
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 4px;
+    background: url('//image.alba.kr/e/common/2021/footer.png') no-repeat 0 0
+}
+
+.footer__faq-agency span {
+    background-position: 0 0
+}
+
+.footer__faq-faq span {
+    background-position: -60px 0
+}
+
+.footer__faq-qna span {
+    background-position: 0 -60px
+}
+
+.footer__app {
+    float: right;
+    box-sizing: border-box;
+    width: 319px;
+    height: 81px;
+    border-left: 1px solid #ddd;
+    font-size: 13px;
+    line-height: 1.45
+}
+
+.footer__app>a {
+    overflow: hidden;
+    display: block;
+    width: 279px;
+    height: 78px;
+    padding: 3px 0 0 40px
+}
+
+.footer__app strong {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: normal;
+    font-size: 24px
+}
+
+.footer__app span {
+    float: right;
+    width: 74px;
+    height: 74px;
+    background: url('//image.alba.kr/e/common/202005/footer_app.png') no-repeat 0 0
+}
+
+.footer__link {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee
+}
+
+.footer__menu {
+    overflow: hidden;
+    width: 1260px;
+    margin: 0 auto
+}
+
+.footer__menu>li {
+    float: left
+}
+
+.footer__menu a {
+    display: block;
+    height: 60px;
+    padding: 0 26px;
+    font-size: 15px;
+    line-height: 60px
+}
+
+.footer__menu>li.first>a {
+    padding-left: 0
+}
+
+.footer__menu>li.end>a {
+    padding-right: 0
+}
+
+.footer__corp {
+    position: relative;
+    width: 1260px;
+    margin: 0 auto;
+    padding: 20px 0 20px
+}
+
+.footer__company-address {
+    padding: 10px 0 6px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666
+}
+
+.footer__company-address>span {
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin: 3px 2px 0 4px;
+    font-size: 0;
+    vertical-align: top;
+    color: transparent;
+    background-color: #e5e5e5
+}
+
+.footer__company-copyright {
+    font-size: 13px;
+    color: #666
+}
+
+.footer__etc>dl {
+    position: absolute;
+    right: 0;
+    width: 255px;
+    margin: 0 0 5px;
+    border: 1px solid #e5e5e5;
+    background-color: #fff
+}
+
+.footer__etc dt span {
+    position: absolute;
+    top: 12px;
+    right: 19px;
+    width: 10px;
+    height: 6px;
+    background: url('//image.alba.kr/e/common/202005/footer.png') no-repeat 0 -60px
+}
+
+.footer__etc dt>a, .footer__etc dd>a {
+    display: block;
+    height: 30px;
+    padding: 0 10px;
+    font-size: 13px;
+    line-height: 30px;
+    text-decoration: none
+}
+
+.footer__etc dd {
+    display: none
+}
+
+.footer__etc dd>a:hover {
+    background-color: #eee
+}
+
+.footer__family {
+    z-index: 2;
+    top: 38px
+}
+
+.footer__local {
+    top: 75px
+}
+
+.footer__etc>dl.on {
+    z-index: 9999
+}
+
+.footer__etc>dl.on dt {
+    border-bottom: 1px solid #e5e5e5
+}
+
+.footer__etc>dl.on dd {
+    display: block
+}
+
+#Prize {
+    width: 1260px;
+    margin: 0 auto;
+    border-top: 1px solid #e5e5e5
+}
+
+.prize__list {
+    overflow: hidden;
+    width: 1260px
+}
+
+.prize__list>li {
+    float: left;
+    width: 14.28%
+}
+
+.prize__list a {
+    display: block;
+    width: 150px;
+    height: 130px;
+    margin: 0 auto;
+    font-size: 0;
+    color: transparent;
+    background: url('//image.alba.kr/e/common/2022/prize_202201.jpg') no-repeat 0 0
+}
+
+.prize__list-1>a {
+    background-position: 0 0
+}
+
+.prize__list-2>a {
+    background-position: -150px 0
+}
+
+.prize__list-3>a {
+    background-position: -300px 0
+}
+
+.prize__list-4>a {
+    background-position: 0 -150px
+}
+
+.prize__list-5>a {
+    background-position: -150px -150px
+}
+
+.prize__list-6>a {
+    background-position: -300px -150px
+}
+
+.prize__list-7>a {
+    background-position: 0 -300px
+}
+
+/* 배너 - 스카이 */
+#SkyBanner {
+    overflow: hidden;
+    position: fixed;
+    _position: absolute;
+    top: 206px;
+    left: 50%;
+    width: 106px;
+    margin-left: 642px
+}
+
+.quickTop {
+    position: fixed;
+    _position: absolute;
+    bottom: -33px;
+    left: 50%;
+    margin-left: 642px
+}
+
+/* 배너 - 날개 */
+#WingBanner {
+    overflow: hidden;
+    position: absolute;
+    top: 199px;
+    right: 50%;
+    width: 94px;
+    margin-right: 642px
+}
+
+/* 첫 방문 */
+#firstVisitWrap {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 90px;
+    background: #017ece
+}
+
+.firstVisit {
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+    height: 90px;
+    margin: 0 auto;
+    text-indent: -999em;
+    background: url('//image.alba.kr/e/main/201406/FirstVisit_bg.png') no-repeat 0 0
+}
+
+#Ban_00 {
+    background-image: url('//image.alba.kr/e/main/201406/FirstVisit_img.png')
+}
+
+#Ban_01 {
+    background-position: 0 0
+}
+
+#Ban_02 {
+    background-position: 0 -95px
+}
+
+#Ban_03 {
+    background-position: 0 -190px
+}
+
+#Ban_04 {
+    background-position: 0 -285px
+}
+
+#Ban_05 {
+    background-position: 0 -380px
+}
+
+#Ban_06 {
+    background-position: 0 -475px
+}
+
+.firstVisit a.firstVisitBtn {
+    position: absolute;
+    top: 24px;
+    width: 45px;
+    height: 45px;
+    background: url('//image.alba.kr/e/main/201406/FirstVisit_img.png') no-repeat
+}
+
+.firstVisit a.prev {
+    left: 10px;
+    background-position: -100px -95px
+}
+
+.firstVisit a.prev:hover {
+    background-position: -150px -95px
+}
+
+.firstVisit a.close {
+    right: 10px;
+    background-position: 0 -95px
+}
+
+.firstVisit a.close:hover {
+    background-position: -50px -95px
+}
+
+.firstVisit a.firstVistBan {
+    position: absolute;
+    width: 155px;
+    height: 27px;
+    text-indent: -999em
+}
+
+#Ban_00 a.ban_01 {
+    width: 130px;
+    height: 38px;
+    top: 36px;
+    left: 594px
+}
+
+#Ban_00 a.ban_06 {
+    width: 130px;
+    height: 38px;
+    top: 36px;
+    left: 734px
+}
+
+#Ban_01 a.guin {
+    left: 344px
+}
+
+#Ban_01 a.ban_02 {
+    right: 236px
+}
+
+#Ban_02 a.ban_03 {
+    left: 344px
+}
+
+#Ban_02 a.ban_04 {
+    right: 266px
+}
+
+#Ban_02 a.ban_05 {
+    right: 71px
+}
+
+#Ban_02 a.ban_05 {
+    right: 71px
+}
+
+#Ban_03 a.sign {
+    top: 45px;
+    right: 167px
+}
+
+#Ban_04 a.goodsInfo {
+    top: 47px;
+    right: 167px
+}
+
+#Ban_05 a.app {
+    top: 47px;
+    right: 167px
+}
+
+#Ban_06 a.regist {
+    top: 17px;
+    left: 343px
+}
+
+#Ban_06 a.sign {
+    top: 17px;
+    right: 207px
+}
+
+/* 팝업 - 구인공고 노출위치  */
+#iframe_viewposition {
+    position: absolute;
+    top: 34px;
+    left: 199px
+}
+
+body.popJobReg {
+    background: none
+}
+
+#popJobReg {
+    width: 412px;
+    padding-bottom: 35px;
+    text-align: center;
+    background: url('//image.alba.kr/e/main/201302/popJobReg_bg_b.gif') no-repeat left bottom
+}
+
+#popJobReg h1 {
+    padding-top: 40px;
+    background: url('//image.alba.kr/e/main/201302/popJobReg_bg_t.gif') no-repeat left top
+}
+
+#popJobReg dl {
+    margin-top: 20px
+}
+
+#popJobReg dl dt {
+    margin-left: 33px;
+    text-align: left
+}
+
+#popJobReg dl dd {
+    margin-top: 7px
+}
+
+#popJobReg p.how {
+    margin-top: 17px
+}
+
+#popJobReg p.btn {
+    margin-top: 11px
+}
+
+#popJobReg p.btn img {
+    margin: 0 1px
+}
+
+/* 팝업 - 입사지원자 알림  */
+#cMainPart_onDesire {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 207px;
+    height: 71px;
+    margin-left: -480px;
+    background: url('//image.alba.kr/e/main/201302/onDesire_bg.gif') no-repeat left top
+}
+
+#cMainPart_onDesire p.notice {
+    position: absolute;
+    top: 14px;
+    left: 87px;
+    font-size: 11px;
+    letter-spacing: -1px;
+    color: #504f4d
+}
+
+#cMainPart_onDesire p.notice span {
+    display: block;
+    color: #6a6a68
+}
+
+#cMainPart_onDesire p.count {
+    position: absolute;
+    top: 17px;
+    left: 8px;
+    width: 69px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #5f5e5c
+}
+
+#cMainPart_onDesire p.count span {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-size: 11px
+}
+
+#cMainPart_onDesire p.count a {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #f94c00
+}
+
+#cMainPart_onDesire p.confirm {
+    position: absolute;
+    top: 43px;
+    left: 87px
+}
+
+#cMainPart_onDesire p.close {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    cursor: pointer
+}
+
+/* 기업회원 로그인 알림 */
+#LoginAlarm {
+    z-index: 99999;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 328px;
+    text-align: center;
+    border: 1px solid #666
+}
+
+#LoginAlarm p {
+    font-size: 12px;
+    font-family: tahoma;
+    letter-spacing: -1px
+}
+
+#LoginAlarm div.close {
+    position: absolute;
+    top: 1px;
+    right: 1px
+}
+
+#LoginAlarm div.close a {
+    display: block;
+    width: 29px;
+    height: 29px;
+    font-size: 0;
+    background: #fff url('//image.alba.kr/e/main/201610/icon.png') no-repeat -131px 10px
+}
+
+#LoginAlarm div.close img {
+    cursor: pointer
+}
+
+#LoginAlarm .bizCertState {
+    padding: 16px 0 20px;
+    background: #fff
+}
+
+#LoginAlarm .bizCertState p.title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333
+}
+
+#LoginAlarm .bizCertState div.state {
+    position: relative;
+    height: 33px;
+    *height: 79px;
+    margin-left: 25px
+}
+
+#LoginAlarm .bizCertState div.state .line {
+    display: block;
+    width: 216px;
+    height: 1px;
+    margin-top: 44px;
+    background: #ddd
+}
+
+#LoginAlarm .bizCertState div.state ul {
+    position: absolute;
+    left: 0;
+    top: -30px;
+    *top: 16px
+}
+
+#LoginAlarm .bizCertState div.state ul li {
+    float: left;
+    width: 60px;
+    height: 45px;
+    margin-left: 12px;
+    padding-top: 15px;
+    font-size: 11px;
+    text-align: center;
+    color: #666;
+    background: #efefef;
+    border-radius: 50%
+}
+
+#LoginAlarm .bizCertState div.state ul li:first-child {
+    margin-left: 0
+}
+
+#LoginAlarm .bizCertState div.state ul li.now {
+    color: #333;
+    background: #ffd100
+}
+
+#LoginAlarm .bizCertState p.guide {
+    padding-top: 7px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666
+}
+
+#LoginAlarm .bizCertState p.guide.num {
+    letter-spacing: 0
+}
+
+#LoginAlarm .bizCertState p.view {
+    padding-top: 18px;
+    text-align: center
+}
+
+#LoginAlarm .bizCertState p.view a {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 19px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #fff;
+    background: #438de8;
+    border: 1px solid #438de8
+}
+
+#LoginAlarm .bizCertState p.view a.btnWhite {
+    margin-right: 2px;
+    color: #333;
+    background: #fff;
+    border: 1px solid #ddd
+}
+
+/* 레이어팝업 - 공통 */
+div.layerNotice, div.layerPromotion {
+    z-index: 99999;
+    position: fixed;
+    _position: absolute;
+    left: 50%;
+    top: 430px
+}
+
+div.layerPromotion {
+    top: 100px
+}
+
+div.layerPromotion p.close {
+    position: absolute;
+    top: 10px;
+    right: 31px;
+    font-size: 11px;
+    letter-spacing: -1px;
+    word-spacing: -1px;
+    text-align: right;
+    color: #1848a2
+}
+
+div.layerPromotion p.close label {
+    padding-right: 7px;
+    background: url('//image.alba.kr/e/main/201302/layerPromotion_bg.gif') no-repeat right top
+}
+
+div.layerPromotion p.close a {
+    padding: 0 15px 0 4px;
+    color: #1848a2;
+    background: url('//image.alba.kr/e/main/201302/layerPromotion_bg.gif') no-repeat right -40px
+}
+
+div.layerPromotion p.state span.name {
+    position: absolute;
+    top: 57px;
+    top: 58px\9;
+    right: 225px;
+    text-indent: 0;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: -1px;
+    color: #000
+}
+
+div.layerPromotion p.state, div.layerPromotion p.date, div.layerPromotion p.safety, div.layerPromotion p.guide {
+    text-indent: -999em
+}
+
+div.layerPromotion p.date span {
+    position: absolute;
+    top: 138px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: tahoma;
+    text-indent: 0;
+    color: #abeeff
+}
+
+div.layerPromotion p.date span.year {
+    left: 216px
+}
+
+div.layerPromotion p.date span.month {
+    left: 272px
+}
+
+div.layerPromotion p.date span.day {
+    left: 310px
+}
+
+div.layerPromotion p.safety a {
+    position: absolute;
+    top: 158px;
+    right: 46px;
+    width: 88px;
+    height: 45px
+}
+
+div.layerPromotion p.button {
+    position: absolute;
+    bottom: 63px
+}
+
+div.layerPromotion p.button.write {
+    left: 136px;
+    width: 188px
+}
+
+div.layerPromotion p.button.update {
+    left: 135px;
+    width: 191px
+}
+
+div.layerPromotion p.button.mag {
+    left: 147px;
+    width: 191px
+}
+
+div.layerPromotion p.button a {
+    display: block;
+    height: 43px;
+    text-indent: -999em
+}
+
+div.filterMain {
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    filter: alpha(opacity=30);
+    opacity: 0.3
+}
+
+div.filterMain.snsGuide {
+    filter: alpha(opacity=30);
+    opacity: 0.3
+}
+
+/* 레이어팝업 - 유입경로별 SNS로그인 안내 */
+#SnsGuide {
+    position: absolute;
+    left: 50%;
+    top: 156px;
+    margin-left: 276px
+}
+
+#SnsGuide span {
+    display: block;
+    overflow: hidden;
+    width: 204px;
+    height: 111px;
+    text-indent: -999em;
+    background: url('//image.alba.kr/e/main/201302/layerNotice_bg_snsGuide.png') no-repeat 0 0
+}
+
+#SnsGuide .naver {
+    background-position: 0 -131px
+}
+
+#SnsGuide .daum {
+    background-position: 0 -262px
+}
+
+#SnsGuide .nate {
+    background-position: 0 -393px
+}
+
+/* 레이어팝업 - 이력서 없는 경우 */
+#ResumeNo {
+    width: 459px;
+    height: 433px;
+    margin-left: -229px;
+    background: url('//image.alba.kr/e/main/201302/layerPromotion_bg_resumeNo.png') no-repeat left top
+}
+
+/* 모스버거 이벤트 2012-04-20 */
+#ResumeNo span.mosburger {
+    position: absolute;
+    left: -68px;
+    top: 194px;
+    width: 140px;
+    height: 153px;
+    background: url('//image.alba.kr/event/20120420_mosburger/main_sticker.gif') no-repeat 0 0
+}
+
+#ResumeNo span.mosburger a {
+    overflow: hidden;
+    display: block;
+    width: 140px;
+    height: 153px;
+    text-indent: -999em
+}
+
+/* 이력서 작성 - 그남자그여자 */
+#ResumeNo span.eventlayer {
+    position: absolute;
+    left: 360px;
+    top: 250px
+}
+
+#ResumeNo span.eventlayer a.contents {
+    display: block;
+    width: 187px;
+    height: 188px;
+    text-indent: -999em;
+    background: url('//image.alba.kr/event/20130227_themanThegirl/main_sticker.png') no-repeat 0 0
+}
+
+#ResumeNo span.eventlayer a.close {
+    position: absolute;
+    right: 14px;
+    bottom: 4px;
+    width: 21px;
+    height: 21px;
+    text-indent: -999em
+}
+
+/* 레이어팝업 - 이력서 마지막 등록 */
+#ResumeReg {
+    width: 459px;
+    height: 485px;
+    margin-left: -229px;
+    background: url('//image.alba.kr/e/main/201302/layerPromotion_bg_resumeReg.png') no-repeat left top
+}
+
+/* 레이어팝업 - 이력서 마지막 수정 */
+#ResumeMod {
+    width: 459px;
+    height: 485px;
+    margin-left: -229px;
+    background: url('//image.alba.kr/e/main/201302/layerPromotion_bg_resumeMod.png') no-repeat left top
+}
+
+/* 레이어팝업 - 면접제의 */
+#ResumeInterview {
+    width: 482px;
+    margin-left: -241px;
+    padding: 0 0 260px;
+    background: url('//image.alba.kr/e/main/201302/layerPromotion_bg_resumeInterview.png') no-repeat right bottom
+}
+
+#ResumeInterview div.wrap {
+    width: 482px;
+    padding: 225px 0 0;
+    background: url('//image.alba.kr/e/main/201302/layerPromotion_bg_resumeInterview.png') no-repeat left top
+}
+
+#ResumeInterview p.state span.name {
+    right: 235px
+}
+
+#ResumeInterview table {
+    width: 406px;
+    margin: 0 auto
+}
+
+#ResumeInterview table th {
+    padding: 8px 0 7px;
+    padding: 8px 0 5px\9;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: -1px;
+    color: #3a6e93;
+    background: #62b2f8;
+    border-top: 4px solid #bcdeff;
+    border-bottom: 1px solid #bcdeff;
+    border-left: 1px solid #bcdeff
+}
+
+#ResumeInterview table th.title {
+    width: auto;
+    border-left: 0 none
+}
+
+#ResumeInterview table th.date {
+    width: 70px
+}
+
+#ResumeInterview table th.setup {
+    width: 64px
+}
+
+#ResumeInterview table td {
+    padding: 10px 0 9px;
+    padding: 10px 0 7px\9;
+    font-size: 11px;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px solid #bcdeff;
+    border-left: 1px solid #bcdeff
+}
+
+#ResumeInterview table td.title {
+    padding-left: 8px;
+    text-align: left;
+    border-left: 0 none
+}
+
+#ResumeInterview table td.title a {
+    color: #fff
+}
+
+#ResumeInterview table td.title span {
+    font-weight: bold;
+    color: #213e57
+}
+
+#ResumeInterview table td.date {
+    letter-spacing: 0
+}
+
+#ResumeInterview table td.setup {
+    padding: 0
+}
+
+#ResumeInterview table td.setup a {
+    display: block;
+    width: 45px;
+    height: 18px;
+    margin: 0 auto;
+    text-indent: -999em;
+    background: url('//image.alba.kr/e/main/201302/layerPromotion_bg_resumeInterview.png') no-repeat left -529px
+}
+
+@media all and (min-width: 0) {
+    #ResumeInterview table th {
+        padding:8px 0 3px\9
+    }
+
+    #ResumeInterview table td {
+        padding: 10px 0 5px\9
+    }
+}
+
+/* 레이어팝업 - 쿠폰 도착 */
+#NoticeCoupon {
+    width: 447px;
+    margin: -150px 0 0 -223px
+}
+
+#NoticeCoupon iframe.ie6 {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    _display: block;
+    width: 447px;
+    height: 300px;
+    margin: 0 auto
+}
+
+#NoticeCoupon div.content {
+    z-index: 99999;
+    position: relative;
+    width: 359px;
+    padding: 70px 44px 0;
+    text-align: center;
+    background: url('//image.alba.kr/e/main/201302/bg_coupon_layer1.gif') no-repeat 0 0
+}
+
+#NoticeCoupon div.content img.title {
+    margin-top: -15px
+}
+
+#NoticeCoupon div.content div.table {
+    overflow: hidden;
+    margin: 15px auto 0;
+    padding: 0 10px;
+    width: 310px;
+    background: #f5faff;
+    border: 1px solid #71b4eb
+}
+
+#NoticeCoupon div.content table {
+    width: 310px;
+    margin: 0 auto
+}
+
+#NoticeCoupon div.content table th, #NoticeCoupon div.content table td {
+    padding: 10px 0;
+    padding: 11px 0 9px\9;
+    text-align: left;
+    border-bottom: 1px solid #afd4f1
+}
+
+#NoticeCoupon div.content table th {
+    width: 80px;
+    text-align: center;
+    color: #0098d1
+}
+
+#NoticeCoupon div.content table .name td, #NoticeCoupon div.content table .discount td {
+    font-size: 14px;
+    font-weight: 900
+}
+
+#NoticeCoupon div.content table .name td em, #NoticeCoupon div.content table .discount td em {
+    font-family: tahoma, 'Malgun Gothic',sans-serif;
+    color: #f60
+}
+
+#NoticeCoupon div.content table .term th, #NoticeCoupon div.content table .term td {
+    border-bottom: 0 none
+}
+
+#NoticeCoupon div.content table td span {
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    border-left: 1px solid #c2b8ae
+}
+
+#NoticeCoupon div.footer {
+    z-index: 99999;
+    position: relative;
+    width: 359px;
+    padding: 15px 44px 37px;
+    text-align: center;
+    background: url('//image.alba.kr/e/main/201302/bg_coupon_layer1.gif') no-repeat 0 100%
+}
+
+#NoticeCoupon p.close {
+    z-index: 999999;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 165px;
+    height: 16px;
+    padding: 10px 5px 0;
+    font-size: 11px;
+    line-height: 11px;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #fff
+}
+
+#NoticeCoupon p.close label {
+    margin: 0 0 0 5px
+}
+
+#NoticeCoupon p.close a {
+    overflow: hidden;
+    display: inline-block;
+    padding: 2px 15px 0 0;
+    margin: -4px 0 0 5px;
+    line-height: 11px;
+    vertical-align: middle;
+    color: #fff !important;
+    background: url('//image.alba.kr/e/main/201302/btn_coupon_close.gif') no-repeat 100% 2px
+}
+
+/* 레이어팝업 - 이력서 열람 쿠폰 도착 */
+#ResumeCoupon {
+    width: 447px;
+    margin: -150px 0 0 -223px
+}
+
+#ResumeCoupon iframe.ie6 {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    _display: block;
+    width: 447px;
+    height: 300px;
+    margin: 0 auto
+}
+
+#ResumeCoupon div.content {
+    z-index: 99999;
+    position: relative;
+    width: 359px;
+    padding: 70px 44px 0;
+    text-align: center;
+    background: url('//image.alba.kr/e/main/201302/bg_coupon_layer1.gif') no-repeat 0 0
+}
+
+#ResumeCoupon div.content img.title {
+    margin-top: -15px
+}
+
+#ResumeCoupon div.content div.table {
+    overflow: hidden;
+    margin: 15px auto 0;
+    padding: 0 10px;
+    width: 310px;
+    background: #f5faff;
+    border: 1px solid #71b4eb
+}
+
+#ResumeCoupon div.content table {
+    width: 310px;
+    margin: 0 auto
+}
+
+#ResumeCoupon div.content table th, #ResumeCoupon div.content table td {
+    padding: 10px 0;
+    padding: 11px 0 9px\9;
+    text-align: left;
+    border-bottom: 1px solid #afd4f1
+}
+
+#ResumeCoupon div.content table th {
+    width: 80px;
+    text-align: center;
+    color: #0098d1
+}
+
+#ResumeCoupon div.content table .name td, #ResumeCoupon div.content table .discount td {
+    font-size: 14px;
+    font-weight: 900
+}
+
+#ResumeCoupon div.content table .name td em, #ResumeCoupon div.content table .discount td em {
+    font-family: tahoma, 'Malgun Gothic',sans-serif;
+    color: #f60
+}
+
+#ResumeCoupon div.content table .term th, #ResumeCoupon div.content table .term td {
+    border-bottom: 0 none
+}
+
+#ResumeCoupon div.content table td span {
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    border-left: 1px solid #c2b8ae
+}
+
+#ResumeCoupon div.footer {
+    z-index: 99999;
+    position: relative;
+    width: 359px;
+    padding: 15px 44px 37px;
+    text-align: center;
+    background: url('//image.alba.kr/e/main/201302/bg_coupon_layer1.gif') no-repeat 0 100%
+}
+
+#ResumeCoupon p.close {
+    z-index: 999999;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 165px;
+    height: 16px;
+    padding: 10px 5px 0;
+    font-size: 11px;
+    line-height: 11px;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #fff
+}
+
+#ResumeCoupon p.close label {
+    margin: 0 0 0 5px
+}
+
+#ResumeCoupon p.close a {
+    overflow: hidden;
+    display: inline-block;
+    padding: 2px 15px 0 0;
+    margin: -4px 0 0 5px;
+    line-height: 11px;
+    vertical-align: middle;
+    color: #fff !important;
+    background: url('//image.alba.kr/e/main/201302/btn_coupon_close.gif') no-repeat 100% 2px
+}
+
+/* 레이어팝업 - 상품권 도착 */
+#NoticeGiftcard {
+    width: 481px;
+    margin: -236px 0 0 -240px
+}
+
+#NoticeGiftcard iframe.ie6 {
+    z-index: 1;
+    position: absolute;
+    left: 7px;
+    top: 16px;
+    display: none;
+    _display: block;
+    width: 467px;
+    height: 300px;
+    margin: 0 auto
+}
+
+#NoticeGiftcard div.content {
+    z-index: 99999;
+    position: relative;
+    padding: 90px 27px 14px;
+    text-align: center;
+    background: url('//image.alba.kr/e/main/201302/bg_giftcard_layer.gif') no-repeat 0 0
+}
+
+#NoticeGiftcard div.content table {
+    width: 371px;
+    margin: 25px auto 0;
+    border-top: 1px solid #c7bdb3;
+    border-bottom: 3px solid #f5f3f1
+}
+
+#NoticeGiftcard div.content table th {
+    width: 82px;
+    padding: 10px 0 10px 5px;
+    padding: 11px 0 9px\9;
+    font-weight: 900;
+    text-align: center;
+    color: #765b3e;
+    border: 1px solid #c7bdb3;
+    border-top: 0 none;
+    border-right: 0 none
+}
+
+#NoticeGiftcard div.content table td {
+    text-align: left;
+    padding: 10px 0 10px;
+    padding: 11px 0 9px\9;
+    border: 1px solid #c7bdb3;
+    border-top: 0 none;
+    border-left: 0 none
+}
+
+#NoticeGiftcard div.content table td span {
+    display: inline-block;
+    padding: 0 10px 0 20px;
+    border-left: 1px solid #c7bdb3
+}
+
+#NoticeGiftcard div.content table .product td {
+    font-weight: 900
+}
+
+#NoticeGiftcard div.content table .product td em {
+    font-family: tahoma, 'Malgun Gothic',sans-serif;
+    color: #f60
+}
+
+#NoticeGiftcard div.footer {
+    z-index: 99999;
+    position: relative;
+    height: 218px;
+    text-align: center;
+    background: url('//image.alba.kr/e/main/201302/bg_giftcard_layer_b.gif') no-repeat 0 100%
+}
+
+#NoticeGiftcard div.footer img.guide {
+    margin: 120px 0 0
+}
+
+#NoticeGiftcard p.close {
+    z-index: 999999;
+    position: absolute;
+    right: 18px;
+    top: 9px;
+    font-size: 11px;
+    letter-spacing: -1px;
+    color: #9a9a9a
+}
+
+#NoticeGiftcard p.close label {
+    margin-right: 3px;
+    color: #483626
+}
+
+#NoticeGiftcard p.close a {
+    margin-left: 3px;
+    text-decoration: none;
+    color: #483626
+}
+
+/* 레이어팝업 - 게재중 공고 */
+#NoticeGoods {
+    width: 500px;
+    margin: -328px 0 0 -250px
+}
+
+#NoticeGoods iframe.ie6 {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    _display: block;
+    width: 467px;
+    height: 300px;
+    margin: 0 auto
+}
+
+#NoticeGoods div.top {
+    z-index: 99999;
+    position: relative;
+    height: 151px;
+    text-align: center;
+    background: url('//image.alba.kr/e/main/201302/Noticegoods_layer_bg.gif') no-repeat left top
+}
+
+#NoticeGoods div.top p {
+    padding: 65px 0 0;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #c7e4ff
+}
+
+#NoticeGoods div.top p span {
+    display: inline-block;
+    height: 24px;
+    padding-top: 4px;
+    color: #000;
+    background: url('//image.alba.kr/e/main/201302/Noticegoods_name_bg_repeat.gif') repeat-x left top
+}
+
+#NoticeGoods div.topNo {
+    height: 34px;
+    background-image: url('//image.alba.kr/e/main/201302/Noticegoods_layer_bg.gif')
+}
+
+#NoticeGoods div.content {
+    z-index: 99999;
+    position: relative;
+    height: 421px;
+    padding: 0 0 0 27px;
+    background: url('//image.alba.kr/e/main/201302/Noticegoods_layer_bg_bottom.gif') no-repeat left bottom
+}
+
+#NoticeGoods div.content div.banner {
+    padding: 10px 0 0
+}
+
+#NoticeGoods div.content p img.title {
+    margin: 10px 0 5px 0
+}
+
+#NoticeGoods div.content img.button {
+    margin: 0 auto 0
+}
+
+#NoticeGoods div.content table {
+    width: 444px;
+    text-align: center
+}
+
+#NoticeGoods div.content table thead {
+    font-weight: bold;
+    color: #222;
+    background: #f9f9f9
+}
+
+#NoticeGoods div.content table thead th {
+    height: 27px;
+    padding-top: 3px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5
+}
+
+#NoticeGoods div.content table tbody {
+    color: #464851
+}
+
+#NoticeGoods div.content table tbody tr td {
+    height: 34px;
+    padding-top: 3px;
+    line-height: 1.3;
+    border-bottom: 1px solid #e5e5e5
+}
+
+#NoticeGoods div.content table tbody tr td span.date {
+    font-size: 11px;
+    color: #999
+}
+
+#NoticeGoods div.content table tbody tr td a {
+    text-decoration: none
+}
+
+#NoticeGoods div.content table tbody tr td strong.reading {
+    color: #f16803
+}
+
+#NoticeGoods div.content table tbody tr td strong {
+    color: #0395f1
+}
+
+#NoticeGoods div.content div.go {
+    padding: 10px 0 0 106px
+}
+
+#NoticeGoods p.close {
+    z-index: 999999;
+    position: absolute;
+    right: 13px;
+    top: 11px;
+    font-size: 11px;
+    letter-spacing: -1px;
+    color: #dbedff
+}
+
+#NoticeGoods p.close label {
+    margin-right: 3px;
+    color: #dbedff
+}
+
+#NoticeGoods p.close a {
+    margin-left: 3px;
+    text-decoration: none;
+    color: #dbedff
+}
+
+/* 레이어팝업 - 회원정보 최신화 유도 */
+#EmailModify {
+    width: 533px;
+    margin: -132px 0 0 -265px
+}
+
+#EmailModify div.content {
+    z-index: 99999;
+    position: relative;
+    height: 264px;
+    padding: 0;
+    background: url('//image.alba.kr/e/main/201302/bg_EmailModify.png') no-repeat left top
+}
+
+#EmailModify div.content h1 {
+    position: absolute;
+    overflow: hidden;
+    top: 26px;
+    width: 100%;
+    height: 77px;
+    text-indent: -999em
+}
+
+#EmailModify div.content .existing label, #EmailModify div.content .existing input, #EmailModify div.content .modification label, #EmailModify div.content .modification input, #EmailModify div.content .modification span, #EmailModify div.content .modification select, #EmailModify div.content .modification a {
+    float: left
+}
+
+#EmailModify div.content .existing {
+    overflow: hidden;
+    position: absolute;
+    top: 123px;
+    left: 37px;
+    height: 32px
+}
+
+#EmailModify div.content .existing label {
+    width: 67px;
+    height: 27px;
+    text-indent: -999em;
+    background: url('//image.alba.kr/e/main/201302/bg_EmailModify.png') no-repeat left -273px
+}
+
+#EmailModify div.content .existing input {
+    width: 300px;
+    height: 24px;
+    padding: 2px 0 0 10px;
+    *height: 18px;
+    *padding-top: 8px;
+    height: 22px\9;
+    padding-top: 4px\9;
+    color: #4d301f;
+    background: #fff9dd;
+    border: 1px solid #dccd96
+}
+
+#EmailModify div.content .modification {
+    overflow: hidden;
+    position: absolute;
+    top: 185px;
+    left: 37px;
+    height: 32px
+}
+
+#EmailModify div.content .modification label {
+    float: left;
+    width: 67px;
+    height: 27px;
+    text-indent: -999em;
+    background: url('//image.alba.kr/e/main/201302/bg_EmailModify.png') no-repeat left -293px
+}
+
+#EmailModify div.content .modification input {
+    width: 85px;
+    height: 24px;
+    padding: 2px 0 0 5px;
+    *height: 18px;
+    *padding-top: 8px;
+    height: 22px\9;
+    padding-top: 4px\9;
+    background: #fff;
+    border: 1px solid #9f9f9f
+}
+
+#EmailModify div.content .modification select {
+    width: 100px;
+    margin: 4px 0 0 5px
+}
+
+#EmailModify div.content .modification span {
+    float: left;
+    margin: 0 3px;
+    line-height: 32px
+}
+
+#EmailModify div.content .modification a {
+    overflow: hidden;
+    width: 82px;
+    height: 28px;
+    margin-left: 5px;
+    text-indent: -999em;
+    background: url('//image.alba.kr/e/main/201302/bg_EmailModify.png') no-repeat left -320px
+}
+
+#EmailModify div.content .comment {
+    position: absolute;
+    left: 104px;
+    bottom: 30px;
+    color: #7f7f7f;
+    font-size: 11px;
+    letter-spacing: -1px
+}
+
+#EmailModify p.close {
+    z-index: 999999;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    font-size: 11px;
+    letter-spacing: -1px;
+    color: #a87804
+}
+
+#EmailModify p.close a {
+    margin-left: 17px;
+    text-decoration: none;
+    color: #a87804
+}
+
+/* 레이어팝업 - SNS로그인회원 회원가입유도 */
+#JoinSNS {
+    overflow: hidden;
+    width: 479px;
+    margin: -218px 0 0 -238px
+}
+
+#JoinSNS div.content {
+    z-index: 99999;
+    position: relative;
+    height: 436px;
+    padding: 0;
+    background: url('//image.alba.kr/e/main/201302/layer_bg_JoinSNS1.png') no-repeat left top
+}
+
+#JoinSNS div.content p.userName {
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    color: #3d2100
+}
+
+#JoinSNS div.content h1 {
+    position: absolute;
+    overflow: hidden;
+    top: 29px;
+    width: 100%;
+    height: 130px;
+    text-indent: -999em
+}
+
+#JoinSNS div.content ul.detail {
+    position: absolute;
+    overflow: hidden;
+    bottom: 92px;
+    right: 51px;
+    width: 378px;
+    height: 164px
+}
+
+#JoinSNS div.content ul.detail li {
+    position: relative;
+    height: 19px;
+    padding: 17px 0 18px 97px;
+    border-bottom: 1px solid #eee;
+    background: url('//image.alba.kr/e/main/201302/layer_bg_JoinSNS1.png') no-repeat 16px -472px
+}
+
+#JoinSNS div.content ul.detail li label.title {
+    position: absolute;
+    left: 26px;
+    top: 21px;
+    width: 70px;
+    font-weight: bold
+}
+
+#JoinSNS div.content ul.detail li label.gender {
+    display: inline-block;
+    width: 35px;
+    padding: 5px 0 0;
+    vertical-align: middle
+}
+
+#JoinSNS div.content ul.detail li input.typeText {
+    width: 198px;
+    padding: 2px 5px;
+    border: 1px solid #d6d5d5
+}
+
+#JoinSNS div.content ul.detail li select {
+    width: 65px;
+    border: 1px solid #d6d5d5
+}
+
+#JoinSNS div.content ul.detail li select.year {
+    width: 74px
+}
+
+#JoinSNS div.content p.comment {
+    overflow: hidden;
+    text-indent: -999em
+}
+
+#JoinSNS div.content .joinSns {
+    overflow: hidden;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 132px;
+    height: 50px;
+    text-indent: -999em
+}
+
+#JoinSNS p.close {
+    z-index: 999999;
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    font-size: 11px;
+    letter-spacing: -1px;
+    color: #e2f2ff
+}
+
+#JoinSNS p.close a {
+    margin-left: 20px;
+    padding: 0 15px 0 0;
+    text-decoration: none;
+    color: #e2f2ff
+}
+
+/* 레이어팝업 - 채용확정 여부확인 */
+#JobConfirm {
+    overflow: hidden;
+    width: 600px;
+    margin: -380px 0 0 -350px;
+    padding: 50px;
+    background-color: #f5f6f8
+}
+
+.jobConfirm-h1 {
+    margin: 0 0 20px;
+    font-size: 25px;
+    letter-spacing: -0.1em;
+    color: #535f77
+}
+
+.jobConfirm-guide {
+    margin: 0 0 30px;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: -1px
+}
+
+.jobConfirm-guide>strong {
+    letter-spacing: 0
+}
+
+.jobConfirm-count {
+    margin: 0 0 5px;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: -1px
+}
+
+.jobConfirm-count>em {
+    letter-spacing: 0
+}
+
+.jobConfirm-list {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 162px;
+    margin: 0 0 10px
+}
+
+.jobConfirm-list-table {
+    table-layout: fixed;
+    width: 100%;
+    border: 1px solid #dadada
+}
+
+.jobConfirm-list-th {
+    height: 38px;
+    color: #fff;
+    letter-spacing: 0;
+    background-color: #535f79;
+    border-left: 1px solid #a1a1a1
+}
+
+.jobConfirm-list-th:first-child {
+    border-left: 0 none
+}
+
+.jobConfirm-list-th.adid {
+    width: 130px
+}
+
+.jobConfirm-list-th.title {
+    width: auto
+}
+
+.jobConfirm-list-th.stateAppl {
+    width: 120px
+}
+
+.jobConfirm-list-th.stateJob {
+    width: 120px
+}
+
+.jobConfirm-list-td {
+    height: 57px;
+    line-height: 1.7;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid #dadada
+}
+
+.jobConfirm-list-td.title {
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 15px;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.jobConfirm-help {
+    margin: 0 0 30px
+}
+
+.jobConfirm-help-li {
+    margin: 3px 0;
+    font-size: 13px;
+    letter-spacing: -1px
+}
+
+.jobConfirm-help-dot {
+    font-weight: bold
+}
+
+.jobConfirm-action>a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    text-align: center;
+    text-decoration: none;
+    color: #edebec;
+    background-color: #535f79
+}
+
+.jobConfirm-close>a {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 35px;
+    height: 34px;
+    font-size: 0;
+    color: transparent;
+    background: url('//image.alba.kr/btn/btn_close.png') no-repeat 0 0
+}
+
+.jobConfirm-closeWeek {
+    position: absolute;
+    top: auto;
+    bottom: 25px;
+    left: 50px
+}
+
+/* android 안내문 */
+div.android {
+    z-index: 999999;
+    position: relative;
+    width: 100%;
+    height: 42px;
+    padding-top: 10px;
+    background-color: #555;
+    background: gradient(linear, 0 50%, 0 100%, from(#444), to(#666));
+    border-bottom: 1px solid #444;
+    box-shadow: 0 1px 1px rgba(0,0,0,.5),inset 0 15px 35px rgba(0,0,0,.25)
+}
+
+div.android p, div.android a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: -1px
+}
+
+div.android p.suggest {
+    float: left;
+    padding: 5px 0 0 40px;
+    background: url('//image.alba.kr/e/main/201302/android.gif') no-repeat 15px -58px
+}
+
+div.android p.suggest a {
+    color: #9bff39;
+    text-decoration: underline
+}
+
+div.android p.cmd {
+    float: right;
+    padding: 5px 15px 0 0
+}
+
+div.android p.cmd a {
+    display: inline-block;
+    padding: 0 15px;
+    text-decoration: none
+}
+
+div.android p.cmd a.close {
+    border-right: 1px solid #666
+}
+
+div.android p.cmd a.nosee {
+    padding-right: 20px;
+    background: url('//image.alba.kr/e/main/201302/android.gif') no-repeat 100% 5px
+}
+
+/* ipad 안내문 */
+div.ipad {
+    z-index: 999999;
+    position: relative;
+    width: 100%;
+    height: 28px;
+    padding-top: 5px;
+    background-color: #555;
+    background: gradient(linear, 0 50%, 0 100%, from(#444), to(#666));
+    border-bottom: 1px solid #444;
+    box-shadow: 0 1px 1px rgba(0,0,0,.5),inset 0 15px 35px rgba(0,0,0,.25)
+}
+
+div.ipad p, div.ipad a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: -1px
+}
+
+div.ipad p.suggest {
+    float: left;
+    padding: 4px 0 0 37px;
+    background: url('//image.alba.kr/e/main/201302/ipad.gif') no-repeat 17px -57px
+}
+
+div.ipad p.suggest a {
+    color: #9bff39;
+    text-decoration: underline
+}
+
+div.ipad p.cmd {
+    float: right;
+    padding: 5px 15px 0 0
+}
+
+div.ipad p.cmd a {
+    display: inline-block;
+    padding: 0 15px;
+    text-decoration: none
+}
+
+div.ipad p.cmd a.close {
+    border-right: 1px solid #666
+}
+
+div.ipad p.cmd a.nosee {
+    padding-right: 20px;
+    background: url('//image.alba.kr/e/main/201302/ipad.gif') no-repeat 100% 2px
+}
+
+/* 모바일도 알바천국! */
+div.topSlideBanner {
+    z-index: 999;
+    position: relative;
+    width: 1070px;
+    height: 85px;
+    margin: 0 auto;
+    background: url('//image.alba.kr/e/main/201302/topSlideBanner_bg_txt.jpg') no-repeat left top
+}
+
+div.topSlideBanner div.context {
+    width: 425px;
+    height: 85px
+}
+
+div.topSlideBanner div.context p.headline a {
+    position: absolute;
+    display: block;
+    left: 217px;
+    top: 14px;
+    width: 190px;
+    height: 56px;
+    text-indent: -999em
+}
+
+div.topSlideBanner div.context div.url {
+    position: absolute;
+    left: 425px;
+    top: 9px;
+    width: 333px;
+    height: 61px;
+    padding: 5px 0 0 150px
+}
+
+div.topSlideBanner div.context div.url p.title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 144px;
+    height: 42px;
+    text-indent: -999em
+}
+
+div.topSlideBanner div.context div.url ul {
+    position: relative;
+    float: left;
+    width: 59px
+}
+
+div.topSlideBanner div.context div.url ul li {
+    display: none;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 55px;
+    height: 55px
+}
+
+div.topSlideBanner div.context div.url ul li.selectMobileiPhone {
+    background: url('//image.alba.kr/e/main/201302/topSlideBanner_bg_txt.jpg') no-repeat 0 -90px
+}
+
+div.topSlideBanner div.context div.url ul li a {
+    display: none
+}
+
+div.topSlideBanner div.context div.url div.number {
+    float: left;
+    width: 330px;
+    padding: 0 0 0 80px
+}
+
+div.topSlideBanner div.context div.url div.number p.code {
+    clear: both;
+    padding: 10px 0 5px
+}
+
+div.topSlideBanner div.context div.url div.number label {
+    font-weight: 900
+}
+
+div.topSlideBanner div.context div.url div.number input.typeText, div.topSlideBanner div.context div.url div.number span {
+    float: left;
+    padding: 2px;
+    padding: 3px 2px 1px\9;
+    *margin-top: 1px
+}
+
+div.topSlideBanner div.context div.url div.number span.number {
+    position: relative;
+    width: 43px;
+    padding: 18px 0 0;
+    _height: 0;
+    cursor: pointer;
+    background: #fff url('//image.alba.kr/e/main/201302/topSlideBanner_bg_txt_mobile.gif') no-repeat -50px -290px;
+    border: 1px solid #7f9db9
+}
+
+div.topSlideBanner div.context div.url div.number span.number input.typeRadio {
+    display: none;
+    display: block\9;
+    position: absolute\9;
+    left: -9999em\9;
+    top: -9999em\9
+}
+
+div.topSlideBanner div.context div.url div.number span.number label {
+    zoom:1;display: none;
+    font-weight: 400;
+    padding: 2px;
+    padding: 3px 2px 1px\9;
+    line-height: 14px;
+    border-top: 1px solid #cfe1ea
+}
+
+div.topSlideBanner div.context div.url div.number span.number label.on {
+    color: #fff;
+    background: #3a8db5
+}
+
+div.topSlideBanner div.context div.url div.number span.number label.selected {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    padding: 3px 2px;
+    padding: 4px 2px 2px\9;
+    line-height: 12px;
+    border: 0 none
+}
+
+div.topSlideBanner div.context div.url div.number input.typeText {
+    width: 50px;
+    height: 14px;
+    line-height: 12px;
+    border: 1px solid #7f9db9;
+    ime-mode: inactive
+}
+
+div.topSlideBanner div.context div.url div.number a {
+    float: left;
+    overflow: hidden;
+    margin: -1px 0 0 5px;
+    *margin-top: 0;
+    width: 56px;
+    height: 21px;
+    text-indent: -999em;
+    vertical-align: middle;
+    background: url('//image.alba.kr/e/main/201302/topSlideBanner_bg_txt.jpg') no-repeat 0 bottom
+}
+
+div.topSlideBanner div.context p.close {
+    position: absolute;
+    right: 0;
+    bottom: 0
+}
+
+div.topSlideBanner div.context p.close a {
+    display: block;
+    width: 27px;
+    height: 28px;
+    text-indent: -999em
+}
+
+/* Warning */
+#Warning {
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 15px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #f00;
+    border: 5px solid #f00
+}
+
+/* TVCF 프로모션 */
+#PrTvcf {
+    display: none;
+    position: relative;
+    width: 1070px;
+    height: 250px;
+    margin: 0 auto;
+    background: url('//image.alba.kr/e/main/201411/PrTvcf.png') no-repeat center 0
+}
+
+#PrTvcf .contents {
+    position: relative;
+    display: block;
+    height: 250px
+}
+
+#PrTvcf .contents p {
+    font-size: 0;
+    color: transparent
+}
+
+#PrTvcf iframe {
+    position: absolute;
+    right: 53px;
+    top: 26px;
+    border: 1px solid #000
+}
+
+#PrTvcf .close {
+    position: absolute;
+    right: 3px;
+    top: 5px;
+    width: 28px;
+    height: 30px;
+    font-size: 0;
+    color: transparent;
+    background: url('//image.alba.kr/e/main/201411/PrTvcf.png') no-repeat 0 -255px
+}
+
+/* 채팅상담 */
+.customerChat-btn {
+    position: fixed;
+    left: 50%;
+    bottom: 50px;
+    width: 58px;
+    height: 58px;
+    margin-left: 632px;
+    padding: 10px
+}
+
+.customerChat-btn img {
+    width: 100%
+}
+
+.customerChat-layerWrap {
+    display: none;
+    z-index: 999999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none
+}
+
+.customerChat-layer {
+    z-index: 999998;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background-color: #fff
+}
+
+.customerChat-layerContent {
+    position: relative
+}
+
+.customerChat-layerClose {
+    position: absolute;
+    right: 16px;
+    top: 17px;
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+    color: transparent;
+    background: url('//image.alba.kr/common/customer_chat_bg.png') no-repeat -77px 0
+}
+
+/* modal-layer */
+.modal-layer__filter {
+    z-index: 100000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5
+}
+
+.modal-layer__wrap {
+    z-index: 100001;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    margin: -169px 0 0 -250px;
+    background-color: #fff
+}
+
+.modal-layer__h1 {
+    padding: 0 20px;
+    height: 50px;
+    border-bottom: 2px solid #ffd200;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+    color: #222
+}
+
+.modal-layer__guide {
+    padding: 10px 15px 10px 25px;
+    border-bottom: 1px solid #ededed;
+    background-color: #fafafa
+}
+
+.modal-layer__guide>li {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #888
+}
+
+.modal-layer__content {
+    padding: 20px
+}
+
+.modal-layer__close {
+    z-index: 99999;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none
+}
+
+.modal-layer__close:hover {
+    text-decoration: none;
+    color: #222
+}
+
+/* TV CF */
+.tv-cf__model1 {
+    z-index: 99;
+    position: absolute;
+    top: 573px;
+    left: 50%;
+    margin-left: -654px
+}
+
+.tv-cf__model2 {
+    z-index: 99;
+    position: absolute;
+    top: 224px;
+    left: 50%;
+    margin-left: 517px
+}
+
+/* layerpop */
+.layer-pop {
+    display: none;
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.layer-pop.on {
+    display: block
+}
+
+.layer-pop__wrap {
+    z-index: 99999;
+    position: fixed;
+    width: 440px;
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%)
+}
+
+.layer-pop__title {
+    height: 69px;
+    padding: 0 70px 0 30px;
+    border-bottom: 1px solid #ddd;
+    font-weight: normal;
+    font-size: 24px;
+    font-family: HGSoftGGothicssi60g;
+    letter-spacing: 0;
+    line-height: 69px
+}
+
+.layer-pop__title.center {
+    text-align: center
+}
+
+.layer-pop__contents {
+    padding: 30px 30px 20px
+}
+
+.layer-pop__action {
+    padding: 0 30px 30px;
+    text-align: center
+}
+
+.layer-pop__button {
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 140px;
+    height: 50px;
+    margin: 0 2px;
+    padding: 0 50px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: HGSoftGGothicssi60g;
+    letter-spacing: 0;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none !important;
+    color: #222 !important;
+    background-color: #ffe000
+}
+
+.layer-pop__button.cancel {
+    border: 1px solid #d8dadc;
+    line-height: 48px;
+    color: #747678 !important;
+    background-color: #fff
+}
+
+.layer-pop__term {
+    padding: 0 30px;
+    border-top: 1px solid #efefef;
+    line-height: 45px;
+    color: #999
+}
+
+.layer-pop__input {
+    position: relative;
+    display: inline-block
+}
+
+.layer-pop__input input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    margin: 0;
+    cursor: pointer;
+    opacity: 0
+}
+
+.layer-pop__input label {
+    display: inline-block;
+    padding: 0 0 0 28px;
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #999;
+    background: url('//image.alba.kr/m/input_checkbox_off.png') no-repeat 0 11px;
+    background-size: 22px 22px
+}
+
+.layer-pop__input input[type="checkbox"]:checked + label {
+    background-image: url('//image.alba.kr/m/input_checkbox_on.png')
+}
+
+.layer-pop__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 69px;
+    height: 69px;
+    padding: 0;
+    border-radius: 0 8px 0 0;
+    font-size: 0;
+    text-align: center;
+    cursor: pointer;
+    color: transparent;
+    background-color: #fff
+}
+
+.layer-pop__close::before, .layer-pop__close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 28px;
+    background-color: #666
+}
+
+.layer-pop__close::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg)
+}
+
+.layer-pop__close::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(45deg)
+}
+
+/* 프로모션 레이어 팝업 */
+.filter {
+    z-index: 998;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    filter: alpha(opacity=30);
+    opacity: 0.3
+}
+
+.layer-promotion {
+    z-index: 10001;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.layer-promotion__wrap {
+    z-index: 999;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.15);
+    width: 516px;
+    margin: -336px 0 0 -258px;
+    padding: 40px 0 0;
+    border-radius: 10px;
+    background-color: #fff
+}
+
+.layer-promotion__title {
+    margin: 0 40px 20px;
+    font-size: 26px;
+    letter-spacing: -2px;
+    text-align: center
+}
+
+.layer-promotion__title>strong {
+    font-weight: normal
+}
+
+.layer-promotion__title>em {
+    color: #3366cc
+}
+
+.layer-promotion__list {
+    margin: 0 40px 30px;
+    height: 63px;
+    font-size: 18px;
+    line-height: 63px;
+    text-align: center;
+    color: #666;
+    background-color: #f5f7fa
+}
+
+.layer-promotion__list>span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 19px 4px 0 0;
+    vertical-align: top;
+    background: url('//image.alba.kr/biz/BizMain_icon.png') no-repeat -60px 0
+}
+
+.layer-promotion__list>strong {
+    margin-left: 5px;
+    color: #222
+}
+
+.layer-promotion__action {
+    margin: 0 40px 30px;
+    text-align: center
+}
+
+.layer-promotion__action>a {
+    display: inline-block;
+    height: 47px;
+    margin: 0 3px;
+    padding: 0 65px;
+    border: 1px solid #000;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 47px;
+    color: #fff;
+    background-color: #000
+}
+
+.layer-promotion__action-continue {
+    color: #fff !important;
+    background-color: #000 !important
+}
+
+.layer-promotion__close {
+    height: 44px;
+    padding: 0 20px;
+    border-top: 1px solid #eee;
+    font-size: 13px;
+    line-height: 44px;
+    text-align: right;
+    color: #666
+}
+
+.layer-promotion__close>a {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    color: transparent;
+    background: url('//image.alba.kr/biz/BizMain_icon.png') no-repeat -60px -30px
+}
+
+.layer-promotion__close>span {
+    margin-top: 4px
+}
+
+.main__inputbox {
+    *zoom:1;overflow: hidden;
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    margin-right: 20px;
+    vertical-align: top
+}
+
+.main__inputbox .main__input {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 1px
+}
+
+.main__inputbox .main__label {
+    *zoom:1;z-index: 3;
+    *display: inline;
+    display: inline-block;
+    position: relative;
+    height: 36px;
+    padding: 0 1px 0 26px;
+    line-height: 35px;
+    vertical-align: top;
+    background-color: #fff;
+    background-repeat: no-repeat
+}
+
+.main__inputbox .main__label strong {
+    font-weight: normal
+}
+
+.main__inputbox .main__label--text-hide {
+    font-size: 0;
+    line-height: 0;
+    color: transparent
+}
+
+.main__inputbox input[type="checkbox"]:disabled+label, .main__inputbox input[type="radio"]:disabled+label, .main__inputbox.disabled input[type="checkbox"]+label, .main__inputbox.disabled input[type="radio"]+label {
+    background-position: 0 -112px;
+    color: #ccc
+}
+
+.main__inputbox input[type="checkbox"]+label {
+    background-image: url('//image.alba.kr/biz/biz_input_checkbox_v3.png');
+    background-position: 0 8px
+}
+
+.main__inputbox input[type="radio"]+label {
+    background-image: url('//image.alba.kr/biz/biz_input_radio_v3.png');
+    background-position: 0 8px
+}
+
+.main__inputbox input[type="checkbox"]:checked+label, .main__inputbox input[type="radio"]:checked+label, .main__inputbox.on input[type="checkbox"]+.main__label, .main__inputbox.on input[type="radio"]+.main__label {
+    background-position: 0 -52px;
+    color: #3366cc
+}

@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+img {
+	width:151px;
+	margin: 0 150px 0 0;
+}
+
+.search {
+	display: inline-block;
+	position: relative;
+	width: 400px;
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid #363e4d;
+    border-radius: 22px;
+    background-color: #fff;
+    text-align:right;
+    margin: 50px 0 30px 0;
+}
+
+.searchSubmit {
+	width: 34px;
+    height: 34px;
+	padding: 0;
+    font-size: 0;
+    cursor: pointer;
+    color: transparent;
+    background: url(//image.alba.kr/e/common/2023/header.png) no-repeat 0 0 / 150px auto;
+    border: none;
+    margin: 5px 5px 0 0;
+}
+
+.updatePerson, .registPerson {
+    position:relative;
+    height: 26px;
+    padding: 0 10px;
+    line-height: 26px;
+    font-size: 14px;
+    font-weight: normal;
+    border: none;
+    background: #f7f7f7;
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+}
+.top {
+	background-color: white;
+}
+
+.bottom {
+	width:900px;
+	margin: 0 auto;
+	height: 50px;
+	background-color:#fbfbfb;
+}
+.bottom ul {
+	font-size: 20px;
+	line-height: 1.2;
+    letter-spacing: -1px;
+    color: #222;
+}
+.bottom li {
+	float:left;
+}
+
+.bottom a {
+	position: relative;
+    display: block;
+    height: 56px;
+    padding: 0 15px;
+    font-size: 16px;
+    line-height: 56px;
+}
+
+.registPerson {
+	    margin-left:100px;
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.example.mapper.MemberMapper">
+
+	<select id="cgetList" resultType="com.example.domain.CmemberVo">
+	<![CDATA[
+		select * from cmember
+	]]>
+	</select>
+	
+	<!-- 로그인 -->
+	<select id="cmemberLogin" resultType="com.example.domain.CmemberVo">
+		select * from cmember where c_id=#{c_id} and c_password=#{c_password}
+	</select>
+	
+	<insert id="cinsert">
+		insert into
+			cmember (c_id, c_password, c_password_con, c_email, c_phone, c_registnum, c_company, c_president, c_address, c_path, c_valid, c_bno)
+		values
+			( #{c_id}, #{c_password}, #{c_password_con}, #{c_email}, #{c_phone}, #{c_registnum}, #{c_company}, #{c_president}, #{c_address}, #{c_path}, #{c_valid}, c_bno.nextval)
+	</insert>
+	
+
+	<select id="cread" resultType="com.example.domain.CmemberVo">
+		select * from cmember where c_id = #{c_id}
+	</select>
+	
+	<delete id="cdelete">
+		delete from cmember where c_id = #{c_id}
+	</delete>
+	
+	<update id="cupdate">
+		update
+				cmember
+		set
+				c_password= #{c_password}, c_password_con= #{c_password_con},c_email= #{c_email},c_phone= #{c_phone},c_registnum= #{c_registnum},c_company= #{c_company},c_president= #{c_president},c_address= #{c_address},c_valid= #{c_valid}
+		where
+				c_id = #{c_id}	
+	</update> 
+	
+	<select id="pgetList" resultType="com.example.domain.PmemberVo">
+	<![CDATA[
+		select * from pmember
+	]]>
+	</select>
+	
+	<!-- 로그인 -->
+	<select id="pmemberLogin" resultType="com.example.domain.PmemberVo">
+		select * from pmember where p_id=#{p_id} and p_password=#{p_password}
+	</select>
+	
+	<insert id="pinsert">
+		insert into
+			pmember (p_id, p_password, p_password_con, p_name, p_sex, p_email, p_phone, p_address, p_path, p_valid, p_bno)
+		values
+			( #{p_id}, #{p_password}, #{p_password_con}, #{p_name}, #{p_sex}, #{p_email}, #{p_phone}, #{p_address}, #{p_path}, #{p_valid}, p_bno.nextval)
+	</insert>
+	
+
+	<select id="pread" resultType="com.example.domain.PmemberVo">
+		select * from pmember where p_id = #{p_id}
+	</select>
+	
+	<delete id="pdelete">
+		delete pmember where p_id = #{p_id}
+	</delete>
+	
+	<update id="pupdate">
+		update
+				pmember
+		set
+				p_password= #{p_password}, p_password_con= #{p_password_con}, p_name= #{p_name}, p_sex= #{p_sex}, p_email= #{p_email}, p_phone= #{p_phone}, p_address= #{p_address}, p_valid= #{p_valid}
+		where
+				p_id = #{p_id}	
+	</update> 
+	
+	<select id="psearchId" resultType="com.example.domain.PmemberVo">
+		select 
+			*
+		from
+			pmember 
+		where
+			p_name = #{p_name}
+		and	
+			p_phone = #{p_phone}
+	</select>
+</mapper>

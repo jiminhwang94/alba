@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.review {
+	width: 142px;
+    height: 25px;
+    border: 1px solid #bbb;
+    color: #666;
+    padding: 30px 50px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    background: #ffe000;
+}
+

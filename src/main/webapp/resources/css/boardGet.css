@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+.content td {
+	border: 1px solid #b3b3b3;
+}
+
+.content {
+	padding: 20px 0;
+	
+}
+
+.content .head {
+	width: 100px;
+	text-align:center;
+}
+
+.content .content {
+	height: 600px;
+}
+
+.btn {
+	overflow: hidden;
+    display: inline-block;
+    width: 60px;
+    text-align:center;
+    background-color: #e0beff;
+    padding:10px;
+}
+
+.boardModify, .boardDelete {
+	overflow: hidden;
+    display: inline-block;
+    width: 60px;
+    text-align:center;
+    background-color: #e0beff;
+    padding:10px;
+}
+
+#boardModify a{
+	position: absolute;
+	right: 300px;
+}
+
+#boardDelete a {
+	position: absolute;
+	right: 210px
+}
+
+.heading {
+	height: 180px;
+	margin-bottom:20px;
+    background-image: url(//image.alba.kr/story/top_repute_v2.png);
+}
+
+.typeList {
+	padding-left: 127px;
+}

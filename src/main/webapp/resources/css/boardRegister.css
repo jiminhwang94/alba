@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.content_register {
+	margin: auto;
+}
+
+.content_register textarea {
+	height: 457px;
+    width: 695px;
+}
+
+.content_register input {
+	width: 693px;
+    height: 30px;
+}
+
+.result_register {
+	text-align:right;
+}
+
+.result_register button {
+	width:50px;
+}

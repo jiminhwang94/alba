@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/* 상품 (4줄 로고형 기준) */
+.goodsMain {position:relative;width:1260px;margin:0 auto 50px}
+.goodsMain h2 {padding:0 0 15px;font-weight:bold;font-size:24px}
+.goodsMain a,
+.goodsMain a span {text-decoration:none}
+.goodsMain .btnAppl {position:absolute;top:5px;right:0}
+.goodsMain .btnAppl span,
+.goodsMain .btnAppl a {display:inline-block;width:67px;height:28px;font-size:0;vertical-align:top;color:#fff;background:url('//image.alba.kr/e/goods/202005/goods.png') no-repeat}
+.goodsMain .btnAppl span {width:85px;height:13px;margin:7px 5px 0 0;background-position:0 -30px}
+.goodsMain .btnAppl a.guide {background-position:0 0}
+.goodsMain .btnAppl a.appl {background-position:-70px 0}
+
+.goodsBox {width:1260px;margin:0 auto;padding-top:1px}
+.goodsBox:after {content:"";clear:both;display:block}
+.goodsBox>li {position:relative;float:left;box-sizing:border-box;height:166px;border:1px solid #e5e5e5;background-color:#fff}
+.goodsBox>li.first {margin-left:0 !important}
+.goodsBox>li.impact {z-index:1;border-color:#f6c345 !important}
+.goodsBox>li:hover {z-index:2;border-color:#2346e4 !important}
+.goodsBox>li.appPrInfo {padding-bottom:0}
+.goodsBox>li.appPrInfo>a {display:block;height:163px;font-size:0;color:transparent;background-repeat:no-repeat;background-position:center 0}
+.goodsBox>li.noInfo>a {display:block;height:128px;padding-top:36px;font-size:16px;line-height:1.5;text-align:center;text-decoration:none;color:#444;background-color:#fff}
+.goodsBox>li.noInfo>a>em {display:inline-block;height:30px;margin:12px auto 0;padding:0 19px;border:1px solid #5b79fe;font-size:14px;line-height:28px;letter-spacing:-0.1em;color:#2346e4;background-color:#fff}
+
+.goodsBox-info {display:block;height:153px;padding:10px 19px 0;text-decoration:none !important;background-color:#fff}
+.goodsBox-info>.logo {display:block;width:120px;height:48px;margin:0 auto 6px;text-align:center}
+.goodsBox-info>.logo>img {width:120px;height:48px}
+.goodsBox-info>.logo>.valign {display:inline-block;height:51px;vertical-align:middle}
+.goodsBox-info>.logo>.text {overflow:hidden;display:inline-block;max-height:44px;font-weight:bold;font-size:15px;line-height:1.3;vertical-align:middle;word-wrap:break-word;white-space:normal}
+.goodsBox-info>.logo>.text-8,
+.goodsBox-info>.logo>.text-7 {font-size:17px}
+.goodsBox-info>.logo>.text-6,
+.goodsBox-info>.logo>.text-5 {font-size:19px}
+.goodsBox-info>.logo>.text-4,
+.goodsBox-info>.logo>.text-3 {font-size:21px}
+.goodsBox-info>.logo>.text-2,
+.goodsBox-info>.logo>.text-1 {font-size:23px}
+.goodsBox-info>.company {overflow:hidden;display:block;height:15px;margin-bottom:4px;font-weight:bold;font-size:13px;text-overflow:ellipsis;white-space:nowrap;color:#444}
+.goodsBox-info>.title {overflow:hidden;display:block;height:38px;margin-bottom:10px}
+.goodsBox-info>.title>img {margin:0 5px 0 0;vertical-align:top}
+.goodsBox-info>.title>span {font-size:15px;line-height:19px;padding-bottom:1px\0;word-wrap:break-word}
+.goodsBox-info>.title.color>span {color:#f55200}
+.goodsBox-info>.title.bold>span {font-weight:bold}
+.goodsBox-info>.title.bg>span,
+.goodsBox-info>.title.bg_color>span {padding-left:2px;padding-right:2px;color:#fff;background-color:#f55200}
+.goodsBox-info>.title.bg_color>span {color:#fff642 !important}
+.goodsBox-info>.wrap {display:block}
+.goodsBox-info>.wrap span {font-size:13px;color:#666}
+.goodsBox-info>.wrap>span {padding:0 0 0 5px}
+.goodsBox-info>.wrap>span:first-child {padding-left:0;background-image:none}
+.goodsBox-info>.wrap>.time {display:none}
+.goodsBox-info>.wrap>.pay {padding-left:5px;background:url('//image.alba.kr/e/goods/202005/goods.png') no-repeat -138px -70px}
+.goodsBox-info>.wrap>.pay>.payIcon.hour {color:#4c93ac}
+.goodsBox-info>.wrap>.pay>.payIcon.day {color:#59ab4b}
+.goodsBox-info>.wrap>.pay>.payIcon.week {color:#5a74f1}
+.goodsBox-info>.wrap>.pay>.payIcon.month {color:#cb7c1b}
+.goodsBox-info>.wrap>.pay>.payIcon.year {color:#8c6ae7}
+.goodsBox-info>.wrap>.pay>.payIcon.count {color:#e47852}
+.goodsBox-info>.wrap>.pay>.number {margin-left:1px;letter-spacing:0}
+.goodsBox-summary {position:absolute;top:0;right:0;width:27px;height:27px;font-size:0;color:transparent;background:url('//image.alba.kr/e/goods/202005/goods.png') no-repeat 0 -51px}
+.goodsBox-summary.viewchk {background-position:-30px -51px}
+.goodsBox-scrap {position:absolute;top:28px;right:0;width:27px;height:27px;font-size:0;color:transparent;background:url('//image.alba.kr/e/goods/202005/goods.png') no-repeat -60px -51px}
+.goodsBox-scrap.on {background-position:-90px -51px}
+
+/* 슈퍼 채용정보 */
+#MainSuper>.goodsBox>li {width:24.25%;margin:0 0 0.98% 1%}
+#MainSuper>.goodsBox>li.appPrInfo>a {background-image:url('//image.alba.kr/e/goods/202005/appPr_super.png')}
+
+/* 슈퍼TOP 채용정보 */
+#MainSuper>.goodsBox>li.superTop {height:344px}
+#MainSuper>.goodsBox>li.superTop>.goodsBox-info {height:205px;padding-top:137px;background:#fff url('//image.alba.kr/e/goods/2021/supertop_default.png') no-repeat 0 0}
+#MainSuper>.goodsBox>li.superTop>.goodsBox-info>.logo {width:107.2%;height:75px;margin-bottom:0;background-color:#fff}
+#MainSuper>.goodsBox>li.superTop>.goodsBox-info>.logo>img {margin-top:12px}
+#MainSuper>.goodsBox>li.superTop>.goodsBox-info>.logo>.valign {height:75px}
+#MainSuper>.goodsBox>li.superTop>.goodsBox-info>.company {margin-bottom:10px}
+#MainSuper>.goodsBox>li.superTop>.goodsBox-info>.title {height:48px;margin-bottom:20px}
+#MainSuper>.goodsBox>li.superTop>.goodsBox-info>.title>span {font-size:17px;line-height:24px}
+#MainSuper>.goodsBox>li.superTop .goodsBox-summary {top:137px}
+#MainSuper>.goodsBox>li.superTop .goodsBox-scrap {top:165px}
+
+/* 슈퍼POWER 채용정보 */
+#MainSuper>.goodsBox>li.superpower {border:2px solid #f6c345}
+#MainSuper>.goodsBox>li.superpower>.goodsBox-info {height:152px;padding:10px 18px 0 18px}
+#MainSuper>.goodsBox>li.superpower>.goodsBox-info>.ani {display:none}
+#MainSuper>.goodsBox>li.superpower:hover {z-index:3}
+#MainSuper>.goodsBox>li.superpower:hover>.goodsBox-info>.ani {overflow:hidden;display:block;position:absolute;top:152px;left:-2px;width:100%;height:188px;border:2px solid #2346e4;border-top:0 none;background-color:#fff}
+#MainSuper>.goodsBox>li.superpower:hover>.goodsBox-info>.ani>img {position:absolute;top:auto;bottom:-25px;left:-1px;width:304px}
+
+/* 슈퍼브랜드 채용정보 */
+#MainSuperBrand>.goodsBox>li {width:20.06%;margin:-1px 0 0 -1px;border-color:#e5e5e5 !important;border-top-color:#222 !important}
+#MainSuperBrand>.goodsBox>li.noInfo {z-index:1}
+#MainSuperBrand>.goodsBox>li.noInfo>a>em {border-color:#999;color:#222}
+#MainSuperBrand>.goodsBox>li.noInfo:hover {z-index:2;border-color:#2346e4 !important}
+
+#MainSuperBrand>.goodsBox>li>.brandHover {display:none}
+#MainSuperBrand>.goodsBox>li:hover>.brandHover{display:block;position:absolute;top:-1px;right:-1px;bottom:-1px;left:-1px;background-color:#fff}
+#MainSuperBrand>.goodsBox>li:hover>.brandHover>.logo {display:block;height:93px;padding-top:13px;text-align:center}
+#MainSuperBrand>.goodsBox>li:hover>.brandHover>.logo>img {width:163px;height:80px}
+#MainSuperBrand>.goodsBox>li:hover>.brandHover>.company {position:absolute;top:auto;right:-1px;bottom:0;left:-1px;height:46px;padding-top:14px;text-align:center;color:#fff}
+#MainSuperBrand>.goodsBox>li:hover>.brandHover>.company>strong {display:block;margin-bottom:3px}
+#MainSuperBrand>.goodsBox>li:hover>.brandHover>.filter {position:absolute;top:0;left:0;width:100%;height:100%;background:#000;filter:alpha(opacity=30);opacity:0.3}
+#MainSuperBrand>.goodsBox>li:hover>.brandHover:hover>.filter {display:none}
+#MainSuperBrand>.goodsBox>li:hover>.brandHover.multi {width:51%;box-sizing:border-box}
+#MainSuperBrand>.goodsBox>li:hover>.brandHover.multi>.logo>img {width:92px;height:80px}
+#MainSuperBrand>.goodsBox>li:hover>.brandHover.second {left:auto}
+
+.brandInquiryLayer {z-index:10;display:none;position:absolute;top:19px;right:0;width:620px;height:510px;background:url('//image.alba.kr/job/brandInquiryLayer3.jpg') no-repeat 0 0}
+.brandInquiryLayer ol,
+.brandInquiryLayer h2 {font:0/0 'Malgun Gothic';color:transparent}
+.brandInquiryLayer ul {position:absolute;bottom:20px;left:87px}
+.brandInquiryLayer ul li {float:left;margin-left:70px;font-size:12px;}
+.brandInquiryLayer ul li:first-child {margin-left:0}
+.brandinquiry-info__title {float:left;font-size:12px;letter-spacing:-0.55px;color:#222;font-family:'Malgun Gothic',-apple-system,BlinkMagSystemFont,'AppleGothicNeoSD','Microsoft NeoGothic','Droid sans',Sans-serif;;}
+.brandinquiry-info__title--brand {font-weight:bold;letter-spacing:-1px;}
+.brandinquiry-info__title--email {font-size:13px}
+.brandinquiry-info__contents {display:inline-block;margin-left:10px;color:#444;font-size:13px;font-weight:bold;letter-spacing:-0.5px;font-family:'Malgun Gothic',-apple-system,BlinkMagSystemFont,'AppleGothicNeoSD','Microsoft NeoGothic','Droid sans',Sans-serif;;}
+.brandinquiry-info__contents i {display:block;color:#757473;font-weight:normal;font-size:9px;font-style:normal;}
+.brandinquiry-info__contents a {color:#444}
+.brandInquiryLayer p.close {position:absolute;top:0;right:0}
+.brandInquiryLayer p.close a {display:block;margin-top:2px;width:60px;height:55px;font:0/0 'Malgun Gothic';color:transparent}
+
+/* 그랜드 채용정보 */
+#MainGrand>.goodsBox>li {width:25.04%;margin:-1px 0 0 -1px}
+#MainGrand>.goodsBox>li.appPrInfo>a {background-image:url('//image.alba.kr/e/goods/202005/appPr_grand.png')}
+
+/* 긴급 채용정보 */
+#MainEmergency>.goodsBox>li {float:left;width:50.03%;height:82px;margin:-1px 0 0 -1px}
+#MainEmergency .goodsBox-info {height:80px;padding:0 60px 0 19px}
+#MainEmergency .goodsBox-info>.company {float:left;width:130px;height:82px;margin-bottom:0;line-height:82px}
+#MainEmergency .goodsBox-info>.title {height:19px;padding-top:20px}
+#MainEmergency .goodsBox-info>.title,
+#MainEmergency .goodsBox-info>.wrap {float:right;width:400px}
+#MainEmergency>.goodsBox>li.noInfo>a {height:80px;padding-top:0;line-height:80px}
+#MainEmergency>.goodsBox>li.noInfo>a>em {margin-left:20px;border-color:#59ab4b;color:#59ab4b}
+#MainEmergency .goodsBox-summary {top:16px;right:20px;width:28px;height:28px;background-position:0 -50px}
+#MainEmergency .goodsBox-summary.viewchk  {background-position:-30px -50px}
+#MainEmergency .goodsBox-scrap {top:44px;right:20px;width:28px;height:28px;background-position:-60px -50px}
+#MainEmergency .goodsBox-scrap.on  {background-position:-90px -50px}
+
+/* 상품 - 미리보기 */
+#SummaryContainer {z-index:999;display:none;position:absolute}
+#iframeSummary {width:580px;height:530px}
+
+/* 내가 등록한 공고 */
+.hiddenMyAdLayers {z-index:2;position:absolute;top:0;left:50%;width:100%;margin-left:-72px;cursor:pointer}

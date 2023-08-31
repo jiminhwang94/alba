@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+h2 {
+	position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    border-bottom: 2px solid #333;
+}
+
+input {
+	width: 450px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #e5e5e5;
+    font-weight: bold;
+    font-size: 15px;
+    text-indent: 10px;
+}
+
+select {
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    height: 100%;
+    line-height: 35px;
+}
+
+textarea {
+	width: 800px;
+	height: 600px;
+}
+
+.necessary {
+	display: inline-block;
+    margin-left: 3px;
+    font-size: 16px;
+    vertical-align: top;
+    color: #ff2a2a;
+}
+
+.registArea .comment {
+    font-size: 13px;
+    color: #9b9b9b;
+}
+
+.update a {
+	position: absolute;
+}
+
+.image {
+	float: left;
+}
+
+.image .photo {
+	width: 150px;
+    display: block;
+}
+
+.update a, .photo a {
+    top: 0;
+    right: 0;
+    height: 26px;
+    padding: 0 10px;
+    line-height: 26px;
+    font-size: 14px;
+    font-weight: normal;
+    border: 1px solid #bbb;
+    background: #fff;
+    text-align: center;
+    vertical-align: top;
+    display: block;
+}
+
+#career {
+	width: 100px;
+}
+
+.ability_title {
+	width: 127px;
+    height: 38px;
+	float: left;
+}
+
+.select_title {
+    height: 38px;
+}
+
+
+
+.complete {
+	text-align: center;
+	padding: 20px
+}
+
+.review, .completement {
+	width: 142px;
+    height: 25px;
+    border: 1px solid #bbb;
+    color: #666;
+    padding: 30px 50px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.completement {
+	background: #ffe000;
+}
+
+.input input{
+	vertical-align: middle;
+    width: 15px;
+    margin-right: 5px;
+}
+
+.ability_title_job {
+	margin: 10px 60px 0 0;
+	float: left;
+}
+
+.ability_title_publicc {
+	margin-top: 10px;
+    border-bottom: 2px solid black;
+    padding: 10px 0;
+}

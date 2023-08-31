@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mapper.BoardMapper">
+	<select id="bgetList" resultType="com.example.domain.BoardVO">
+		<![CDATA[
+		select * from board where bno > 0
+		]]>
+	</select>
+	<insert id="binsert">
+		insert into board(bno, company, satis, b_id, regdate) values(seq_board.nextval, #{company}, #{satis}, #{b_id}, sysdate)
+	</insert>
+	
+	<insert id ="insertSelectKey">
+		<selectKey keyProperty="bno" order="BEFORE" resultType="long">
+			select seq_board.nextval from dual
+		</selectKey>
+		
+		insert into board(bno, company, satis, b_id, regdate) values(#{bno}, #{company}, #{satis}, #{b_id}, sysdate)
+	</insert>
+	
+  	<select id="bread" resultType="com.example.domain.BoardVO">
+		select * from board where bno = #{bno}
+	</select>
+	<delete id="bdelete">
+		delete board where bno = #{bno}
+	</delete>
+	<update id="bupdate">
+		update board set company=#{company}, satis=#{satis}, updateDate= sysdate where bno = #{bno}
+	</update> 
+	
+	<select id="bgetListWithPaging" resultType="com.example.domain.BoardVO">
+		<![CDATA[
+			select
+					bno, company, satis, b_id, regdate, updatedate
+			from (
+					select
+							/*+INDEX_DESC(board pk_board) */ rownum rn, bno, company, satis, b_id, regdate, updatedate
+					from
+							board
+					where
+							rownum <= #{pageNum} * #{amount}
+				)
+			where
+					rn > (#{pageNum} -1) * #{amount}
+		]]>
+	</select>
+</mapper>

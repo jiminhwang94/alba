@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+h2 {
+	position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    border-bottom: 2px solid #333;
+}
+
+table {
+	padding: 0 50px;
+}
+
+.pNumber, .pEmail, .pAddress, .pHomepage {
+	font-size: 15px;
+    font-weight: bold;
+    color: #999;
+}
+
+.pmember {
+	border-top: 2px solid #333;
+	padding:50px 0 30px 0;
+}
+
+
+.image {
+	float: left;
+}
+
+#register {
+	top: 0;
+    right: 0;
+    height: 26px;
+    padding: 0 10px;
+    line-height: 26px;
+    font-size: 14px;
+    font-weight: normal;
+    border: 1px solid #bbb;
+    background: #fff;
+    text-align: center;
+    vertical-align: top;
+}
+
+.complete {
+	text-align: center;
+	padding: 20px
+}
+
+
+.update, .delete {
+	width: 142px;
+    height: 25px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    color: black;
+    padding: 30px 50px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    background-color: yellow;
+}
+
+.delete {
+	background-color: red;
+	width: 244px;
+	height: 87px;
+}
+
+.registArea .title {
+	padding: 10px 10px 10px 0;
+}
